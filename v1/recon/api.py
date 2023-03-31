@@ -3,6 +3,7 @@ from fastapi import Query, Response
 from fastapi.routing import APIRouter
 import requests
 from lib.recon.security_headers import SecurityHeaders
+from lib.recon.ssl_scanner import SSLScanner
 
 router: APIRouter = APIRouter(
     prefix="/recon",
@@ -11,14 +12,16 @@ router: APIRouter = APIRouter(
 
 
 @router.post("/security-headers")
-async def security_headers( url: Annotated[str, Query(..., regex="^https?://")]):
-    # validate url
-    valid_url = requests.utils.urlparse(url)
-    if not valid_url.scheme or not valid_url.netloc:
-        return Response(status_code=400, content={"message": "Invalid URL"})
-
+async def security_headers(url: Annotated[str,
+                                          Query(..., regex="^https?://")]):
     response = requests.head(url)
     security_headers = SecurityHeaders(response.headers)
     analysis = security_headers.analyze()
     return analysis
 
+
+@router.post("/ssl-scanner")
+async def security_headers(url: Annotated[str,
+                                          Query(..., regex="^https?://")]):
+    analysis = SSLScanner(url).scan()
+    return analysis
