@@ -21,7 +21,6 @@ async def security_headers(url: Annotated[str,
 
 
 @router.post("/ssl-scanner")
-async def security_headers(url: Annotated[str,
-                                          Query(..., regex="^https?://")]):
+async def ssl_scanner(url: Annotated[str, Query(..., regex="^https?://")]):
     analysis = SSLScanner(url).scan()
     return analysis
