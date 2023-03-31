@@ -1,8 +1,8 @@
 from typing import Annotated
-from fastapi import Query, Request, Response
+from fastapi import Query, Response
 from fastapi.routing import APIRouter
 import requests
-from lib.security_headers import SecurityHeaders
+from lib.recon.security_headers import SecurityHeaders
 
 router: APIRouter = APIRouter(
     prefix="/recon",
