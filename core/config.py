@@ -1,0 +1,49 @@
+
+from typing import Any, Dict, List, Optional, Union
+
+from pydantic import AnyHttpUrl, BaseSettings, MongoDsn, validator
+
+
+class Settings(BaseSettings):
+    PROJECT_NAME: str
+    BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = []
+
+    @validator("BACKEND_CORS_ORIGINS", pre=True)
+    def assemble_cors_origins(cls, v: Union[str, List[str]]) -> Union[List[str], str]:
+        if isinstance(v, str) and not v.startswith("["):
+            return [i.strip() for i in v.split(",")]
+        elif isinstance(v, (list, str)):
+            return v
+        raise ValueError(v)
+
+    MONGO_SERVER: str
+    MONGO_USER: str
+    MONGO_PASSWORD: str
+    MONGO_DB: str
+    DATABASE_URI: Optional[MongoDsn] = None
+
+    @validator("DATABASE_URI", pre=True)
+    def assemble_db_connection(cls, v: Optional[str], values: Dict[str, Any]) -> Any:
+        if isinstance(v, str):
+            return v
+        return MongoDsn.build(
+            scheme="mongodb",
+            user=values.get("MONGO_USER"),
+            password=values.get("MONGO_PASSWORD"),
+            host=values.get("MONGO_SERVER"),
+            path=f"/{values.get('MONGO_DB') or ''}",
+        )
+    
+    API_V1_STR: str = "/api/v1"
+    @validator("API_V1_STR", pre=True)
+    def assemble_api_v1_str(cls, v: str) -> str:
+        if v.startswith("/"):
+            return v
+        return f"/{v}"
+
+    class Config:
+        case_sensitive = True
+        env_file = ".env"
+
+
+settings = Settings()
