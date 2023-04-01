@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+import sentry_sdk
 
 from core.config import settings
 
@@ -16,6 +17,12 @@ license = {
     "name": "MIT",
     "url": "https://github.com/geekymeeky/invexis/blob/main/LICENSE"
 }
+
+if settings.ENVIRONMENT == "production":
+    sentry_sdk.init(
+        dsn=settings.SENTRY_DSN,
+        traces_sample_rate=1.0,
+    )
 
 
 def init() -> FastAPI:

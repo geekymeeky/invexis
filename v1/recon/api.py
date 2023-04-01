@@ -1,5 +1,5 @@
 from typing import Annotated
-from fastapi import Query, Response
+from fastapi import Query
 from fastapi.routing import APIRouter
 import requests
 from lib.recon.security_headers import SecurityHeaders
