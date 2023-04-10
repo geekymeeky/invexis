@@ -7,6 +7,8 @@ from lib.recon.security_headers import SecurityHeaders
 from lib.recon.ssl_scanner import SSLScanner
 from urllib3.util import parse_url
 
+from lib.recon.subdomain.subdomain import SubdomainEnum
+
 router: APIRouter = APIRouter(
     prefix="/recon",
     tags=["Recon"],
@@ -36,3 +38,10 @@ async def dns(url: Annotated[str, Query(..., regex="^https?://")]):
     scanner = DNSScanner(domain)
     analysis = scanner.scan()
     return analysis
+
+
+@router.post("/subdomain")
+async def subdomain(url: Annotated[str, Query(..., regex="^https?://")]):
+    scanner = SubdomainEnum(url)
+    analysis = scanner.run()
+    return {"target": url, "subdomains": analysis}
