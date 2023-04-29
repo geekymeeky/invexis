@@ -36,7 +36,6 @@ class SSLScanner:
 
                     self._check_expired(cert_data)
                     self._check_self_signed(cert_data)
-                    self._check_algorithm(cert_data)
                     self._check_wrong_host(cert_data)
 
                     return {
