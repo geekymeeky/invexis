@@ -16,15 +16,15 @@ class DNSScanner:
         self.dmarc = []
         self.dnssec = False
         self.ddos = dict()
+        self.issues = []
 
     def scan(self):
-        self._scan_ns()
-        self._scan_mx()
-        self._scan_txt()
-        self._scan_srv()
-        self._scan_dnssec()
-
-        print(self.ns)
+        self._get_ns()
+        self._get_mx()
+        self._get_txt()
+        self._get_srv()
+        self._check_dnssec()
+        self._check_dns_security()
 
         return {
             'ns': self.ns,
@@ -34,10 +34,11 @@ class DNSScanner:
             'spf': self.spf,
             'dmarc': self.dmarc,
             'dnssec': self.dnssec,
-            'ddos': self.ddos
+            'ddos': self.ddos,
+            'issues': self.issues
         }
 
-    def _scan_ns(self):
+    def _get_ns(self):
         answers = dns.resolver.resolve(self.domain, 'NS')
         for rdata in answers:
             ns = str(rdata.target).rstrip('.')
@@ -55,7 +56,7 @@ class DNSScanner:
             except:
                 pass
 
-    def _scan_mx(self):
+    def _get_mx(self):
         try:
             mx_answers = dns.resolver.resolve(self.domain, 'MX')
             for mx_rdata in mx_answers:
@@ -63,7 +64,7 @@ class DNSScanner:
         except:
             pass
 
-    def _scan_txt(self):
+    def _get_txt(self):
         try:
             txt_answers = dns.resolver.resolve(self.domain, 'TXT')
             for txt_rdata in txt_answers:
@@ -77,7 +78,7 @@ class DNSScanner:
         except:
             pass
 
-    def _scan_srv(self):
+    def _get_srv(self):
         try:
             srv_answers = dns.resolver.resolve('_sip._tcp.' + self.domain,
                                                'SRV')
@@ -86,7 +87,8 @@ class DNSScanner:
         except:
             pass
 
-    def _scan_dnssec(self):
+    def _check_dnssec(self):
+        #  If the DNS records are not in the same subset, it can be easier for an attacker to spoof DNS packets and redirect traffic
         try:
             query = dns.message.make_query(self.domain, 'DNSKEY')
             response = dns.query.udp(query, '8.8.8.8')
@@ -94,3 +96,61 @@ class DNSScanner:
                 self.dnssec = True
         except:
             pass
+
+    def _is_same_subnet(self, ip1, ip2):
+        ip1 = ip1.split('.')
+        ip2 = ip2.split('.')
+        if ip1[0] == ip2[0] and ip1[1] == ip2[1] and ip1[2] == ip2[2]:
+            return True
+        return False
+
+    def _check_dns_security(self):
+
+        # check dnssec
+        if not self.dnssec:
+            self.issues.append({
+                'title': 'DNSSEC is not enabled',
+                'description':
+                'DNSSEC is important because it protects against attacks where DNS data is modified in transit. It also provides a means for a resolver to validate that the information it receives has not been tampered with.',
+                'recommendation': 'Enable DNSSEC',
+                'severity': 'high',
+                'reason': 'Protects against DNS spoofing'
+            })
+
+        # check if all NS records are in the same subnet
+        if len(self.ns) > 1:
+            for ns in self.ns:
+                if not self._is_same_subnet(ns, self.ns[0]):
+                    self.issues.append({
+                        'title':
+                        'NS records are not in the same subnet',
+                        'description':
+                        'NS records are not in the same subnet',
+                        'recommendation':
+                        'NS records should be in the same subnet',
+                        'severity':
+                        'high',
+                        'reason':
+                        'Protects against DNS spoofing and DDoS attacks (DNS amplification)'
+                    })
+                    break
+
+        #check spf record
+        if len(self.spf) == 0:
+            self.issues.append({
+                'title': 'SPF record is not set',
+                'description': 'SPF record is not set',
+                'recommendation': 'Set SPF record',
+                'severity': 'high',
+                'reason': 'Protects against email spoofing'
+            })
+
+        #check dmarc record
+        if len(self.dmarc) == 0:
+            self.issues.append({
+                'title': 'DMARC record is not set',
+                'description': 'DMARC record is not set',
+                'recommendation': 'Set DMARC record',
+                'severity': 'high',
+                'reason': 'Protects against email spoofing'
+            })
