@@ -7,11 +7,13 @@ from cryptography.hazmat.primitives.asymmetric import rsa, padding
 from datetime import datetime
 
 from lib.constants.ssl_constants import EXPIRED
+from lib.shared.scanner import Scanner
 
 
-class SSLScanner:
+class SSLScanner(Scanner):
 
     def __init__(self, target):
+        super().__init__(target)
         self.host = url.parse_url(target).host
         self.port = 443
         self.context = ssl.create_default_context()

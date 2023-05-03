@@ -1,12 +1,32 @@
+import requests
 from lib.shared.utils import exception
+from lib.shared.scanner import Scanner
 
 
-class SecurityHeaders:
+class SecurityHeaders(Scanner):
     """SecurityHeaders class to analyze security headers of a website
-    """    
+    """
 
-    def __init__(self, headers):
+    def __init__(self, target):
+        super().__init__(target)
+        headers = requests.head(f'{self.target}').headers
         self.headers = headers
+
+    def scan(self):
+        """Analyze security headers of a website
+
+        Returns:
+            dict: Analysis of security headers
+        """
+        analysis = {}
+        analysis['X-XSS-Protection'] = self._check_xss_protection()
+        analysis[
+            'Content-Security-Policy'] = self._check_content_security_policy()
+        analysis[
+            'Strict-Transport-Security'] = self._check_strict_transport_security(
+            )
+        analysis['X-Frame-Options'] = self._check_x_frame_options()
+        return analysis
 
     @exception()
     def _check_xss_protection(self):
@@ -14,7 +34,7 @@ class SecurityHeaders:
 
         Returns:
             dict: Analysis of X-XSS-Protection header
-        """        
+        """
         xss_protection = self.headers.get('X-XSS-Protection')
         if xss_protection:
             return {'status': "enabled", 'policy': xss_protection}
@@ -33,7 +53,7 @@ class SecurityHeaders:
 
         Returns:
             dict: Analysis of Content-Security-Policy header
-        """        
+        """
         content_security_policy = self.headers.get('Content-Security-Policy')
         if content_security_policy:
             return {
@@ -55,7 +75,7 @@ class SecurityHeaders:
 
         Returns:
             dict: Analysis of Strict-Transport-Security header
-        """        
+        """
         strict_transport_security = self.headers.get(
             'Strict-Transport-Security')
         if strict_transport_security:
@@ -89,14 +109,15 @@ class SecurityHeaders:
 
         Returns:
             dict: Analysis of X-Frame-Options header
-        """        
+        """
         x_frame_options = self.headers.get('X-Frame-Options')
         if x_frame_options:
             analysis = x_frame_options
             if x_frame_options != 'DENY' and x_frame_options != 'SAMEORIGIN':
                 analysis = {
                     'status': x_frame_options,
-                    'solution': 'Set X-Frame-Options header to DENY or SAMEORIGIN to prevent clickjacking attacks',
+                    'solution':
+                    'Set X-Frame-Options header to DENY or SAMEORIGIN to prevent clickjacking attacks',
                     'severity': 'medium'
                 }
             else:
@@ -108,22 +129,7 @@ class SecurityHeaders:
         else:
             return {
                 'status': 'not set',
-                'solution': 'Set X-Frame-Options header to DENY or SAMEORIGIN to prevent clickjacking attacks',
+                'solution':
+                'Set X-Frame-Options header to DENY or SAMEORIGIN to prevent clickjacking attacks',
                 'severity': 'high'
             }
-
-    def analyze(self):
-        """Analyze security headers of a website
-
-        Returns:
-            dict: Analysis of security headers
-        """        
-        analysis = {}
-        analysis['X-XSS-Protection'] = self._check_xss_protection()
-        analysis[
-            'Content-Security-Policy'] = self._check_content_security_policy()
-        analysis[
-            'Strict-Transport-Security'] = self._check_strict_transport_security(
-            )
-        analysis['X-Frame-Options'] = self._check_x_frame_options()
-        return analysis

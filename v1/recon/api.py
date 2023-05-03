@@ -18,15 +18,13 @@ router: APIRouter = APIRouter(
 @router.post("/security-headers")
 async def security_headers(url: Annotated[str,
                                           Query(..., regex="^https?://")]):
-    response = requests.head(url)
-    security_headers = SecurityHeaders(response.headers)
-    analysis = security_headers.analyze()
+    analysis = SecurityHeaders(url).scan()  # type: ignore
     return analysis
 
 
 @router.post("/ssl-scanner")
 async def ssl_scanner(url: Annotated[str, Query(..., regex="^https?://")]):
-    analysis = SSLScanner(url).scan()
+    analysis = SSLScanner(url).scan()  # type: ignore
     return analysis
 
 
