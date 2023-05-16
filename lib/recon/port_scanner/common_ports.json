@@ -1,0 +1,2751 @@
+{
+    "1/tcp": {
+        "name": "tcpmux",
+        "description": "TCP Port Service Multiplexer"
+    },
+    "3/tcp": {
+        "name": "compressnet",
+        "description": "Compression Process"
+    },
+    "7/tcp": {
+        "name": "echo",
+        "description": "Echo"
+    },
+    "9/tcp": {
+        "name": "discard",
+        "description": "Discard"
+    },
+    "13/tcp": {
+        "name": "daytime",
+        "description": "Daytime"
+    },
+    "17/tcp": {
+        "name": "qotd",
+        "description": "Quote of the Day"
+    },
+    "19/tcp": {
+        "name": "chargen",
+        "description": "Character Generator"
+    },
+    "20/tcp": {
+        "name": "ftp-data",
+        "description": "File Transfer [Default Data]"
+    },
+    "21/tcp": {
+        "name": "ftp",
+        "description": "File Transfer Protocol [Control]"
+    },
+    "22/tcp": {
+        "name": "ssh",
+        "description": "The Secure Shell (SSH) Protocol"
+    },
+    "23/tcp": {
+        "name": "telnet",
+        "description": "Telnet"
+    },
+    "25/tcp": {
+        "name": "smtp",
+        "description": "Simple Mail Transfer"
+    },
+    "33/tcp": {
+        "name": "dsp",
+        "description": "Display Support Protocol"
+    },
+    "37/tcp": {
+        "name": "time",
+        "description": "Time"
+    },
+    "42/tcp": {
+        "name": "name",
+        "description": "Host Name Server"
+    },
+    "43/tcp": {
+        "name": "nicname",
+        "description": "Who Is"
+    },
+    "49/tcp": {
+        "name": "tacacs",
+        "description": "Login Host Protocol (TACACS)"
+    },
+    "53/tcp": {
+        "name": "domain",
+        "description": "Domain Name Server"
+    },
+    "70/tcp": {
+        "name": "gopher",
+        "description": "Gopher"
+    },
+    "79/tcp": {
+        "name": "finger",
+        "description": "Finger"
+    },
+    "80/tcp": {
+        "name": "http",
+        "description": "World Wide Web HTTP"
+    },
+    "82/tcp": {
+        "name": "xfer",
+        "description": "XFER Utility"
+    },
+    "83/tcp": {
+        "name": "mit-ml-dev",
+        "description": "MIT ML Device"
+    },
+    "84/tcp": {
+        "name": "ctf",
+        "description": "Common Trace Facility"
+    },
+    "85/tcp": {
+        "name": "mit-ml-dev",
+        "description": "MIT ML Device"
+    },
+    "88/tcp": {
+        "name": "kerberos",
+        "description": "Kerberos"
+    },
+    "89/tcp": {
+        "name": "su-mit-tg",
+        "description": "SU/MIT Telnet Gateway"
+    },
+    "90/tcp": {
+        "name": "dnsix",
+        "description": "DNSIX Securit Attribute Token Map"
+    },
+    "99/tcp": {
+        "name": "metagram",
+        "description": "Metagram Relay"
+    },
+    "106/tcp": {
+        "name": "3com-tsmux",
+        "description": "3COM-TSMUX"
+    },
+    "109/tcp": {
+        "name": "pop2",
+        "description": "Post Office Protocol - Version 2"
+    },
+    "110/tcp": {
+        "name": "pop3",
+        "description": "Post Office Protocol - Version 3"
+    },
+    "111/tcp": {
+        "name": "sunrpc",
+        "description": "SUN Remote Procedure Call"
+    },
+    "113/tcp": {
+        "name": "ident"
+    },
+    "119/tcp": {
+        "name": "nntp",
+        "description": "Network News Transfer Protocol"
+    },
+    "125/tcp": {
+        "name": "locus-map",
+        "description": "Locus PC-Interface Net Map Ser"
+    },
+    "135/tcp": {
+        "name": "epmap",
+        "description": "DCE endpoint resolution"
+    },
+    "139/tcp": {
+        "name": "netbios-ssn",
+        "description": "NETBIOS Session Service"
+    },
+    "143/tcp": {
+        "name": "imap",
+        "description": "Internet Message Access Protocol"
+    },
+    "144/tcp": {
+        "name": "uma",
+        "description": "Universal Management Architecture"
+    },
+    "146/tcp": {
+        "name": "iso-tp0",
+        "description": "ISO-IP0"
+    },
+    "161/tcp": {
+        "name": "snmp",
+        "description": "SNMP"
+    },
+    "163/tcp": {
+        "name": "cmip-man",
+        "description": "CMIP/TCP Manager"
+    },
+    "179/tcp": {
+        "name": "bgp",
+        "description": "Border Gateway Protocol"
+    },
+    "199/tcp": {
+        "name": "smux",
+        "description": "SMUX"
+    },
+    "211/tcp": {
+        "name": "914c-g",
+        "description": "Texas Instruments 914C/G Terminal IANA assigned this well-formed service name as a replacement for \"914c/g\"."
+    },
+    "212/tcp": {
+        "name": "anet",
+        "description": "ATEXSSTR"
+    },
+    "222/tcp": {
+        "name": "rsh-spx",
+        "description": "Berkeley rshd with SPX auth"
+    },
+    "256/tcp": {
+        "name": "rap",
+        "description": "RAP"
+    },
+    "259/tcp": {
+        "name": "esro-gen",
+        "description": "Efficient Short Remote Operations"
+    },
+    "264/tcp": {
+        "name": "bgmp",
+        "description": "BGMP"
+    },
+    "280/tcp": {
+        "name": "http-mgmt",
+        "description": "http-mgmt"
+    },
+    "311/tcp": {
+        "name": "asip-webadmin",
+        "description": "AppleShare IP WebAdmin"
+    },
+    "366/tcp": {
+        "name": "odmr",
+        "description": "ODMR"
+    },
+    "389/tcp": {
+        "name": "ldap",
+        "description": "Lightweight Directory Access Protocol"
+    },
+    "406/tcp": {
+        "name": "imsp",
+        "description": "Interactive Mail Support Protocol"
+    },
+    "407/tcp": {
+        "name": "timbuktu",
+        "description": "Timbuktu"
+    },
+    "416/tcp": {
+        "name": "silverplatter",
+        "description": "Silverplatter"
+    },
+    "417/tcp": {
+        "name": "onmux",
+        "description": "Onmux"
+    },
+    "425/tcp": {
+        "name": "icad-el",
+        "description": "ICAD"
+    },
+    "427/tcp": {
+        "name": "svrloc",
+        "description": "Server Location"
+    },
+    "443/tcp": {
+        "name": "https",
+        "description": "http protocol over TLS/SSL"
+    },
+    "444/tcp": {
+        "name": "snpp",
+        "description": "Simple Network Paging Protocol"
+    },
+    "445/tcp": {
+        "name": "microsoft-ds",
+        "description": "Microsoft-DS"
+    },
+    "458/tcp": {
+        "name": "appleqtc",
+        "description": "apple quick time"
+    },
+    "464/tcp": {
+        "name": "kpasswd",
+        "description": "kpasswd"
+    },
+    "465/tcp": {
+        "name": "urd",
+        "description": "URL Rendezvous Directory for SSM"
+    },
+    "481/tcp": {
+        "name": "ph",
+        "description": "Ph service"
+    },
+    "497/tcp": {
+        "name": "retrospect",
+        "description": "Retrospect backup and restore service"
+    },
+    "500/tcp": {
+        "name": "isakmp",
+        "description": "isakmp"
+    },
+    "512/tcp": {
+        "name": "exec",
+        "description": "remote process execution; authentication performed using passwords and UNIX login names"
+    },
+    "513/tcp": {
+        "name": "login",
+        "description": "remote login a la telnet; automatic authentication performed based on priviledged port numbers and distributed data bases which identify \"authentication domains\""
+    },
+    "514/tcp": {
+        "name": "shell",
+        "description": "cmd like exec, but automatic authentication is performed as for login server"
+    },
+    "515/tcp": {
+        "name": "printer",
+        "description": "spooler"
+    },
+    "524/tcp": {
+        "name": "ncp",
+        "description": "NCP"
+    },
+    "541/tcp": {
+        "name": "uucp-rlogin",
+        "description": "uucp-rlogin"
+    },
+    "543/tcp": {
+        "name": "klogin"
+    },
+    "544/tcp": {
+        "name": "kshell",
+        "description": "krcmd"
+    },
+    "545/tcp": {
+        "name": "appleqtcsrvr",
+        "description": "appleqtcsrvr"
+    },
+    "548/tcp": {
+        "name": "afpovertcp",
+        "description": "AFP over TCP"
+    },
+    "554/tcp": {
+        "name": "rtsp",
+        "description": "Real Time Streaming Protocol (RTSP)"
+    },
+    "555/tcp": {
+        "name": "dsf"
+    },
+    "563/tcp": {
+        "name": "nntps",
+        "description": "nntp protocol over TLS/SSL (was snntp)"
+    },
+    "587/tcp": {
+        "name": "submission",
+        "description": "Message Submission"
+    },
+    "593/tcp": {
+        "name": "http-rpc-epmap",
+        "description": "HTTP RPC Ep Map"
+    },
+    "616/tcp": {
+        "name": "sco-sysmgr",
+        "description": "SCO System Administration Server"
+    },
+    "617/tcp": {
+        "name": "sco-dtmgr",
+        "description": "SCO Desktop Administration Server"
+    },
+    "625/tcp": {
+        "name": "dec-dlm",
+        "description": "DEC DLM IANA assigned this well-formed service name as a replacement for \"dec_dlm\"."
+    },
+    "631/tcp": {
+        "name": "ipp",
+        "description": "IPP (Internet Printing Protocol)"
+    },
+    "636/tcp": {
+        "name": "ldaps",
+        "description": "ldap protocol over TLS/SSL (was sldap)"
+    },
+    "646/tcp": {
+        "name": "ldp",
+        "description": "LDP"
+    },
+    "648/tcp": {
+        "name": "rrp",
+        "description": "Registry Registrar Protocol (RRP)"
+    },
+    "666/tcp": {
+        "name": "mdqs"
+    },
+    "667/tcp": {
+        "name": "disclose",
+        "description": "campaign contribution disclosures - SDR Technologies"
+    },
+    "668/tcp": {
+        "name": "mecomm",
+        "description": "MeComm"
+    },
+    "683/tcp": {
+        "name": "corba-iiop",
+        "description": "CORBA IIOP"
+    },
+    "687/tcp": {
+        "name": "asipregistry",
+        "description": "asipregistry"
+    },
+    "691/tcp": {
+        "name": "msexch-routing",
+        "description": "MS Exchange Routing"
+    },
+    "700/tcp": {
+        "name": "epp",
+        "description": "Extensible Provisioning Protocol"
+    },
+    "705/tcp": {
+        "name": "agentx",
+        "description": "AgentX"
+    },
+    "711/tcp": {
+        "name": "cisco-tdp",
+        "description": "Cisco TDP"
+    },
+    "714/tcp": {
+        "name": "iris-xpcs",
+        "description": "IRIS over XPCS"
+    },
+    "749/tcp": {
+        "name": "kerberos-adm",
+        "description": "kerberos administration"
+    },
+    "765/tcp": {
+        "name": "webster"
+    },
+    "777/tcp": {
+        "name": "multiling-http",
+        "description": "Multiling HTTP"
+    },
+    "800/tcp": {
+        "name": "mdbs-daemon",
+        "description": "IANA assigned this well-formed service name as a replacement for \"mdbs_daemon\"."
+    },
+    "801/tcp": {
+        "name": "device"
+    },
+    "873/tcp": {
+        "name": "rsync",
+        "description": "rsync"
+    },
+    "888/tcp": {
+        "name": "accessbuilder",
+        "description": "AccessBuilder"
+    },
+    "900/tcp": {
+        "name": "omginitialrefs",
+        "description": "OMG Initial Refs"
+    },
+    "901/tcp": {
+        "name": "smpnameres",
+        "description": "SMPNAMERES"
+    },
+    "902/tcp": {
+        "name": "ideafarm-door",
+        "description": "self documenting Telnet Door"
+    },
+    "903/tcp": {
+        "name": "ideafarm-panic",
+        "description": "self documenting Telnet Panic Door"
+    },
+    "911/tcp": {
+        "name": "xact-backup",
+        "description": "xact-backup"
+    },
+    "912/tcp": {
+        "name": "apex-mesh",
+        "description": "APEX relay-relay service"
+    },
+    "990/tcp": {
+        "name": "ftps",
+        "description": "ftp protocol, control, over TLS/SSL"
+    },
+    "992/tcp": {
+        "name": "telnets",
+        "description": "telnet protocol over TLS/SSL"
+    },
+    "993/tcp": {
+        "name": "imaps",
+        "description": "IMAP over TLS protocol"
+    },
+    "995/tcp": {
+        "name": "pop3s",
+        "description": "POP3 over TLS protocol"
+    },
+    "999/tcp": {
+        "name": "garcon"
+    },
+    "1000/tcp": {
+        "name": "cadlock2"
+    },
+    "1001/tcp": {
+        "name": "webpush",
+        "description": "HTTP Web Push"
+    },
+    "1010/tcp": {
+        "name": "surf",
+        "description": "surf"
+    },
+    "1021/tcp": {
+        "name": "exp1",
+        "description": "RFC3692-style Experiment 1"
+    },
+    "1022/tcp": {
+        "name": "exp2",
+        "description": "RFC3692-style Experiment 2"
+    },
+    "1025/tcp": {
+        "name": "blackjack",
+        "description": "network blackjack"
+    },
+    "1026/tcp": {
+        "name": "cap",
+        "description": "Calendar Access Protocol"
+    },
+    "1029/tcp": {
+        "name": "solid-mux",
+        "description": "Solid Mux Server"
+    },
+    "1033/tcp": {
+        "name": "netinfo-local",
+        "description": "local netinfo port"
+    },
+    "1034/tcp": {
+        "name": "activesync",
+        "description": "ActiveSync Notifications"
+    },
+    "1035/tcp": {
+        "name": "mxxrlogin",
+        "description": "MX-XR RPC"
+    },
+    "1036/tcp": {
+        "name": "nsstp",
+        "description": "Nebula Secure Segment Transfer Protocol"
+    },
+    "1037/tcp": {
+        "name": "ams",
+        "description": "AMS"
+    },
+    "1038/tcp": {
+        "name": "mtqp",
+        "description": "Message Tracking Query Protocol"
+    },
+    "1039/tcp": {
+        "name": "sbl",
+        "description": "Streamlined Blackhole"
+    },
+    "1040/tcp": {
+        "name": "netarx",
+        "description": "Netarx Netcare"
+    },
+    "1041/tcp": {
+        "name": "danf-ak2",
+        "description": "AK2 Product"
+    },
+    "1042/tcp": {
+        "name": "afrog",
+        "description": "Subnet Roaming"
+    },
+    "1043/tcp": {
+        "name": "boinc-client",
+        "description": "BOINC Client Control"
+    },
+    "1044/tcp": {
+        "name": "dcutility",
+        "description": "Dev Consortium Utility"
+    },
+    "1045/tcp": {
+        "name": "fpitp",
+        "description": "Fingerprint Image Transfer Protocol"
+    },
+    "1046/tcp": {
+        "name": "wfremotertm",
+        "description": "WebFilter Remote Monitor"
+    },
+    "1047/tcp": {
+        "name": "neod1",
+        "description": "Sun's NEO Object Request Broker"
+    },
+    "1048/tcp": {
+        "name": "neod2",
+        "description": "Sun's NEO Object Request Broker"
+    },
+    "1049/tcp": {
+        "name": "td-postman",
+        "description": "Tobit David Postman VPMN"
+    },
+    "1050/tcp": {
+        "name": "cma",
+        "description": "CORBA Management Agent"
+    },
+    "1051/tcp": {
+        "name": "optima-vnet",
+        "description": "Optima VNET"
+    },
+    "1052/tcp": {
+        "name": "ddt",
+        "description": "Dynamic DNS Tools"
+    },
+    "1053/tcp": {
+        "name": "remote-as",
+        "description": "Remote Assistant (RA)"
+    },
+    "1054/tcp": {
+        "name": "brvread",
+        "description": "BRVREAD"
+    },
+    "1055/tcp": {
+        "name": "ansyslmd",
+        "description": "ANSYS - License Manager"
+    },
+    "1056/tcp": {
+        "name": "vfo",
+        "description": "VFO"
+    },
+    "1057/tcp": {
+        "name": "startron",
+        "description": "STARTRON"
+    },
+    "1058/tcp": {
+        "name": "nim",
+        "description": "nim"
+    },
+    "1059/tcp": {
+        "name": "nimreg",
+        "description": "nimreg"
+    },
+    "1060/tcp": {
+        "name": "polestar",
+        "description": "POLESTAR"
+    },
+    "1061/tcp": {
+        "name": "kiosk",
+        "description": "KIOSK"
+    },
+    "1062/tcp": {
+        "name": "veracity",
+        "description": "Veracity"
+    },
+    "1063/tcp": {
+        "name": "kyoceranetdev",
+        "description": "KyoceraNetDev"
+    },
+    "1064/tcp": {
+        "name": "jstel",
+        "description": "JSTEL"
+    },
+    "1065/tcp": {
+        "name": "syscomlan",
+        "description": "SYSCOMLAN"
+    },
+    "1066/tcp": {
+        "name": "fpo-fns",
+        "description": "FPO-FNS"
+    },
+    "1067/tcp": {
+        "name": "instl-boots",
+        "description": "Installation Bootstrap Proto. Serv. IANA assigned this well-formed service name as a replacement for \"instl_boots\"."
+    },
+    "1068/tcp": {
+        "name": "instl-bootc",
+        "description": "Installation Bootstrap Proto. Cli. IANA assigned this well-formed service name as a replacement for \"instl_bootc\"."
+    },
+    "1069/tcp": {
+        "name": "cognex-insight",
+        "description": "COGNEX-INSIGHT"
+    },
+    "1070/tcp": {
+        "name": "gmrupdateserv",
+        "description": "GMRUpdateSERV"
+    },
+    "1071/tcp": {
+        "name": "bsquare-voip",
+        "description": "BSQUARE-VOIP"
+    },
+    "1072/tcp": {
+        "name": "cardax",
+        "description": "CARDAX"
+    },
+    "1073/tcp": {
+        "name": "bridgecontrol",
+        "description": "Bridge Control"
+    },
+    "1074/tcp": {
+        "name": "warmspotMgmt",
+        "description": "Warmspot Management Protocol"
+    },
+    "1075/tcp": {
+        "name": "rdrmshc",
+        "description": "RDRMSHC"
+    },
+    "1076/tcp": {
+        "name": "dab-sti-c",
+        "description": "DAB STI-C"
+    },
+    "1077/tcp": {
+        "name": "imgames",
+        "description": "IMGames"
+    },
+    "1078/tcp": {
+        "name": "avocent-proxy",
+        "description": "Avocent Proxy Protocol"
+    },
+    "1079/tcp": {
+        "name": "asprovatalk",
+        "description": "ASPROVATalk"
+    },
+    "1080/tcp": {
+        "name": "socks",
+        "description": "Socks"
+    },
+    "1081/tcp": {
+        "name": "pvuniwien",
+        "description": "PVUNIWIEN"
+    },
+    "1082/tcp": {
+        "name": "amt-esd-prot",
+        "description": "AMT-ESD-PROT"
+    },
+    "1083/tcp": {
+        "name": "ansoft-lm-1",
+        "description": "Anasoft License Manager"
+    },
+    "1084/tcp": {
+        "name": "ansoft-lm-2",
+        "description": "Anasoft License Manager"
+    },
+    "1085/tcp": {
+        "name": "webobjects",
+        "description": "Web Objects"
+    },
+    "1086/tcp": {
+        "name": "cplscrambler-lg",
+        "description": "CPL Scrambler Logging"
+    },
+    "1087/tcp": {
+        "name": "cplscrambler-in",
+        "description": "CPL Scrambler Internal"
+    },
+    "1088/tcp": {
+        "name": "cplscrambler-al",
+        "description": "CPL Scrambler Alarm Log"
+    },
+    "1089/tcp": {
+        "name": "ff-annunc",
+        "description": "FF Annunciation"
+    },
+    "1090/tcp": {
+        "name": "ff-fms",
+        "description": "FF Fieldbus Message Specification"
+    },
+    "1091/tcp": {
+        "name": "ff-sm",
+        "description": "FF System Management"
+    },
+    "1092/tcp": {
+        "name": "obrpd",
+        "description": "Open Business Reporting Protocol"
+    },
+    "1093/tcp": {
+        "name": "proofd",
+        "description": "PROOFD"
+    },
+    "1094/tcp": {
+        "name": "rootd",
+        "description": "ROOTD"
+    },
+    "1095/tcp": {
+        "name": "nicelink",
+        "description": "NICELink"
+    },
+    "1096/tcp": {
+        "name": "cnrprotocol",
+        "description": "Common Name Resolution Protocol"
+    },
+    "1097/tcp": {
+        "name": "sunclustermgr",
+        "description": "Sun Cluster Manager"
+    },
+    "1098/tcp": {
+        "name": "rmiactivation",
+        "description": "RMI Activation"
+    },
+    "1099/tcp": {
+        "name": "rmiregistry",
+        "description": "RMI Registry"
+    },
+    "1100/tcp": {
+        "name": "mctp",
+        "description": "MCTP"
+    },
+    "1102/tcp": {
+        "name": "adobeserver-1",
+        "description": "ADOBE SERVER 1"
+    },
+    "1104/tcp": {
+        "name": "xrl",
+        "description": "XRL"
+    },
+    "1105/tcp": {
+        "name": "ftranhc",
+        "description": "FTRANHC"
+    },
+    "1106/tcp": {
+        "name": "isoipsigport-1",
+        "description": "ISOIPSIGPORT-1"
+    },
+    "1107/tcp": {
+        "name": "isoipsigport-2",
+        "description": "ISOIPSIGPORT-2"
+    },
+    "1108/tcp": {
+        "name": "ratio-adp",
+        "description": "ratio-adp"
+    },
+    "1110/tcp": {
+        "name": "webadmstart",
+        "description": "Start web admin server"
+    },
+    "1111/tcp": {
+        "name": "lmsocialserver",
+        "description": "LM Social Server"
+    },
+    "1112/tcp": {
+        "name": "icp",
+        "description": "Intelligent Communication Protocol"
+    },
+    "1113/tcp": {
+        "name": "ltp-deepspace",
+        "description": "Licklider Transmission Protocol"
+    },
+    "1114/tcp": {
+        "name": "mini-sql",
+        "description": "Mini SQL"
+    },
+    "1117/tcp": {
+        "name": "ardus-mtrns",
+        "description": "ARDUS Multicast Transfer"
+    },
+    "1119/tcp": {
+        "name": "bnetgame",
+        "description": "Battle.net Chat/Game Protocol"
+    },
+    "1121/tcp": {
+        "name": "rmpp",
+        "description": "Datalode RMPP"
+    },
+    "1122/tcp": {
+        "name": "availant-mgr",
+        "description": "availant-mgr"
+    },
+    "1123/tcp": {
+        "name": "murray",
+        "description": "Murray"
+    },
+    "1124/tcp": {
+        "name": "hpvmmcontrol",
+        "description": "HP VMM Control"
+    },
+    "1126/tcp": {
+        "name": "hpvmmdata",
+        "description": "HP VMM Agent"
+    },
+    "1130/tcp": {
+        "name": "casp",
+        "description": "CAC App Service Protocol"
+    },
+    "1131/tcp": {
+        "name": "caspssl",
+        "description": "CAC App Service Protocol Encripted"
+    },
+    "1132/tcp": {
+        "name": "kvm-via-ip",
+        "description": "KVM-via-IP Management Service"
+    },
+    "1137/tcp": {
+        "name": "trim",
+        "description": "TRIM Workgroup Service"
+    },
+    "1138/tcp": {
+        "name": "encrypted-admin",
+        "description": "encrypted admin requests IANA assigned this well-formed service name as a replacement for \"encrypted_admin\"."
+    },
+    "1141/tcp": {
+        "name": "mxomss",
+        "description": "User Message Service"
+    },
+    "1145/tcp": {
+        "name": "x9-icue",
+        "description": "X9 iCue Show Control"
+    },
+    "1147/tcp": {
+        "name": "capioverlan",
+        "description": "CAPIoverLAN"
+    },
+    "1148/tcp": {
+        "name": "elfiq-repl",
+        "description": "Elfiq Replication Service"
+    },
+    "1149/tcp": {
+        "name": "bvtsonar",
+        "description": "BlueView Sonar Service"
+    },
+    "1151/tcp": {
+        "name": "unizensus",
+        "description": "Unizensus Login Server"
+    },
+    "1152/tcp": {
+        "name": "winpoplanmess",
+        "description": "Winpopup LAN Messenger"
+    },
+    "1154/tcp": {
+        "name": "resacommunity",
+        "description": "Community Service"
+    },
+    "1163/tcp": {
+        "name": "sddp",
+        "description": "SmartDialer Data Protocol"
+    },
+    "1164/tcp": {
+        "name": "qsm-proxy",
+        "description": "QSM Proxy Service"
+    },
+    "1165/tcp": {
+        "name": "qsm-gui",
+        "description": "QSM GUI Service"
+    },
+    "1166/tcp": {
+        "name": "qsm-remote",
+        "description": "QSM RemoteExec"
+    },
+    "1169/tcp": {
+        "name": "tripwire",
+        "description": "TRIPWIRE"
+    },
+    "1174/tcp": {
+        "name": "fnet-remote-ui",
+        "description": "FlashNet Remote Admin"
+    },
+    "1175/tcp": {
+        "name": "dossier",
+        "description": "Dossier Server"
+    },
+    "1183/tcp": {
+        "name": "llsurfup-http",
+        "description": "LL Surfup HTTP"
+    },
+    "1185/tcp": {
+        "name": "catchpole",
+        "description": "Catchpole port"
+    },
+    "1186/tcp": {
+        "name": "mysql-cluster",
+        "description": "MySQL Cluster Manager"
+    },
+    "1187/tcp": {
+        "name": "alias",
+        "description": "Alias Service"
+    },
+    "1192/tcp": {
+        "name": "caids-sensor",
+        "description": "caids sensors channel"
+    },
+    "1198/tcp": {
+        "name": "cajo-discovery",
+        "description": "cajo reference discovery"
+    },
+    "1199/tcp": {
+        "name": "dmidi",
+        "description": "DMIDI"
+    },
+    "1201/tcp": {
+        "name": "nucleus-sand",
+        "description": "Nucleus Sand Database Server"
+    },
+    "1213/tcp": {
+        "name": "mpc-lifenet",
+        "description": "Medtronic/Physio-Control LIFENET"
+    },
+    "1216/tcp": {
+        "name": "etebac5",
+        "description": "ETEBAC 5"
+    },
+    "1217/tcp": {
+        "name": "hpss-ndapi",
+        "description": "HPSS NonDCE Gateway"
+    },
+    "1218/tcp": {
+        "name": "aeroflight-ads",
+        "description": "AeroFlight-ADs"
+    },
+    "1233/tcp": {
+        "name": "univ-appserver",
+        "description": "Universal App Server"
+    },
+    "1234/tcp": {
+        "name": "search-agent",
+        "description": "Infoseek Search Agent"
+    },
+    "1236/tcp": {
+        "name": "bvcontrol",
+        "description": "bvcontrol"
+    },
+    "1244/tcp": {
+        "name": "isbconference1",
+        "description": "isbconference1"
+    },
+    "1247/tcp": {
+        "name": "visionpyramid",
+        "description": "VisionPyramid"
+    },
+    "1248/tcp": {
+        "name": "hermes",
+        "description": "hermes"
+    },
+    "1259/tcp": {
+        "name": "opennl-voice",
+        "description": "Open Network Library Voice"
+    },
+    "1271/tcp": {
+        "name": "excw",
+        "description": "eXcW"
+    },
+    "1272/tcp": {
+        "name": "cspmlockmgr",
+        "description": "CSPMLockMgr"
+    },
+    "1277/tcp": {
+        "name": "miva-mqs",
+        "description": "mqs"
+    },
+    "1287/tcp": {
+        "name": "routematch",
+        "description": "RouteMatch Com"
+    },
+    "1296/tcp": {
+        "name": "dproxy",
+        "description": "dproxy"
+    },
+    "1300/tcp": {
+        "name": "h323hostcallsc",
+        "description": "H.323 Secure Call Control Signalling"
+    },
+    "1309/tcp": {
+        "name": "jtag-server",
+        "description": "JTAG server"
+    },
+    "1310/tcp": {
+        "name": "husky",
+        "description": "Husky"
+    },
+    "1311/tcp": {
+        "name": "rxmon",
+        "description": "RxMon"
+    },
+    "1322/tcp": {
+        "name": "novation",
+        "description": "Novation"
+    },
+    "1328/tcp": {
+        "name": "ewall",
+        "description": "EWALL"
+    },
+    "1334/tcp": {
+        "name": "writesrv",
+        "description": "writesrv"
+    },
+    "1352/tcp": {
+        "name": "lotusnote",
+        "description": "Lotus Note"
+    },
+    "1417/tcp": {
+        "name": "timbuktu-srv1",
+        "description": "Timbuktu Service 1 Port"
+    },
+    "1433/tcp": {
+        "name": "ms-sql-s",
+        "description": "Microsoft-SQL-Server"
+    },
+    "1434/tcp": {
+        "name": "ms-sql-m",
+        "description": "Microsoft-SQL-Monitor"
+    },
+    "1443/tcp": {
+        "name": "ies-lm",
+        "description": "Integrated Engineering Software"
+    },
+    "1455/tcp": {
+        "name": "esl-lm",
+        "description": "ESL License Manager"
+    },
+    "1461/tcp": {
+        "name": "ibm-wrless-lan",
+        "description": "IBM Wireless LAN IANA assigned this well-formed service name as a replacement for \"ibm_wrless_lan\"."
+    },
+    "1494/tcp": {
+        "name": "ica",
+        "description": "ica"
+    },
+    "1500/tcp": {
+        "name": "vlsi-lm",
+        "description": "VLSI License Manager"
+    },
+    "1501/tcp": {
+        "name": "saiscm",
+        "description": "Satellite-data Acquisition System 3"
+    },
+    "1503/tcp": {
+        "name": "imtc-mcs",
+        "description": "Databeam"
+    },
+    "1521/tcp": {
+        "name": "ncube-lm",
+        "description": "nCube License Manager"
+    },
+    "1524/tcp": {
+        "name": "ingreslock",
+        "description": "ingres"
+    },
+    "1533/tcp": {
+        "name": "virtual-places",
+        "description": "Virtual Places Software"
+    },
+    "1556/tcp": {
+        "name": "veritas-pbx",
+        "description": "VERITAS Private Branch Exchange IANA assigned this well-formed service name as a replacement for \"veritas_pbx\"."
+    },
+    "1580/tcp": {
+        "name": "tn-tl-r1",
+        "description": "tn-tl-r1"
+    },
+    "1583/tcp": {
+        "name": "simbaexpress",
+        "description": "simbaexpress"
+    },
+    "1594/tcp": {
+        "name": "sixtrak",
+        "description": "sixtrak"
+    },
+    "1600/tcp": {
+        "name": "issd",
+        "description": "issd"
+    },
+    "1641/tcp": {
+        "name": "invision",
+        "description": "InVision"
+    },
+    "1658/tcp": {
+        "name": "sixnetudr",
+        "description": "sixnetudr"
+    },
+    "1666/tcp": {
+        "name": "netview-aix-6",
+        "description": "netview-aix-6"
+    },
+    "1687/tcp": {
+        "name": "nsjtp-ctrl",
+        "description": "nsjtp-ctrl"
+    },
+    "1688/tcp": {
+        "name": "nsjtp-data",
+        "description": "nsjtp-data"
+    },
+    "1700/tcp": {
+        "name": "mps-raft",
+        "description": "mps-raft"
+    },
+    "1717/tcp": {
+        "name": "fj-hdnet",
+        "description": "fj-hdnet"
+    },
+    "1718/tcp": {
+        "name": "h323gatedisc",
+        "description": "H.323 Multicast Gatekeeper Discover"
+    },
+    "1719/tcp": {
+        "name": "h323gatestat",
+        "description": "H.323 Unicast Gatekeeper Signaling"
+    },
+    "1720/tcp": {
+        "name": "h323hostcall",
+        "description": "H.323 Call Control Signalling"
+    },
+    "1721/tcp": {
+        "name": "caicci",
+        "description": "caicci"
+    },
+    "1723/tcp": {
+        "name": "pptp",
+        "description": "pptp"
+    },
+    "1755/tcp": {
+        "name": "ms-streaming",
+        "description": "ms-streaming"
+    },
+    "1761/tcp": {
+        "name": "cft-0",
+        "description": "cft-0"
+    },
+    "1782/tcp": {
+        "name": "hp-hcip",
+        "description": "hp-hcip"
+    },
+    "1801/tcp": {
+        "name": "msmq",
+        "description": "Microsoft Message Que"
+    },
+    "1805/tcp": {
+        "name": "enl-name",
+        "description": "ENL-Name"
+    },
+    "1812/tcp": {
+        "name": "radius",
+        "description": "RADIUS"
+    },
+    "1839/tcp": {
+        "name": "netopia-vo1",
+        "description": "netopia-vo1"
+    },
+    "1840/tcp": {
+        "name": "netopia-vo2",
+        "description": "netopia-vo2"
+    },
+    "1862/tcp": {
+        "name": "mysql-cm-agent",
+        "description": "MySQL Cluster Manager Agent"
+    },
+    "1863/tcp": {
+        "name": "msnp",
+        "description": "MSNP"
+    },
+    "1864/tcp": {
+        "name": "paradym-31port",
+        "description": "Paradym 31 Port"
+    },
+    "1875/tcp": {
+        "name": "westell-stats",
+        "description": "westell stats"
+    },
+    "1900/tcp": {
+        "name": "ssdp",
+        "description": "SSDP"
+    },
+    "1914/tcp": {
+        "name": "elm-momentum",
+        "description": "Elm-Momentum"
+    },
+    "1935/tcp": {
+        "name": "macromedia-fcs",
+        "description": "Macromedia Flash Communications Server MX"
+    },
+    "1947/tcp": {
+        "name": "sentinelsrm",
+        "description": "SentinelSRM"
+    },
+    "1971/tcp": {
+        "name": "netop-school",
+        "description": "NetOp School"
+    },
+    "1972/tcp": {
+        "name": "intersys-cache",
+        "description": "Cache"
+    },
+    "1974/tcp": {
+        "name": "drp",
+        "description": "DRP"
+    },
+    "1984/tcp": {
+        "name": "bb",
+        "description": "BB"
+    },
+    "1998/tcp": {
+        "name": "x25-svc-port",
+        "description": "cisco X.25 service (XOT)"
+    },
+    "1999/tcp": {
+        "name": "tcp-id-port",
+        "description": "cisco identification port"
+    },
+    "2000/tcp": {
+        "name": "cisco-sccp",
+        "description": "Cisco SCCP"
+    },
+    "2001/tcp": {
+        "name": "dc"
+    },
+    "2002/tcp": {
+        "name": "globe"
+    },
+    "2003/tcp": {
+        "name": "brutus",
+        "description": "Brutus Server"
+    },
+    "2004/tcp": {
+        "name": "mailbox"
+    },
+    "2005/tcp": {
+        "name": "berknet"
+    },
+    "2006/tcp": {
+        "name": "invokator"
+    },
+    "2007/tcp": {
+        "name": "dectalk"
+    },
+    "2008/tcp": {
+        "name": "conf"
+    },
+    "2009/tcp": {
+        "name": "news"
+    },
+    "2010/tcp": {
+        "name": "search"
+    },
+    "2013/tcp": {
+        "name": "raid-am"
+    },
+    "2020/tcp": {
+        "name": "xinupageserver"
+    },
+    "2021/tcp": {
+        "name": "servexec"
+    },
+    "2022/tcp": {
+        "name": "down"
+    },
+    "2030/tcp": {
+        "name": "device2"
+    },
+    "2033/tcp": {
+        "name": "glogger"
+    },
+    "2034/tcp": {
+        "name": "scoremgr"
+    },
+    "2035/tcp": {
+        "name": "imsldoc"
+    },
+    "2038/tcp": {
+        "name": "objectmanager"
+    },
+    "2040/tcp": {
+        "name": "lam"
+    },
+    "2041/tcp": {
+        "name": "interbase"
+    },
+    "2042/tcp": {
+        "name": "isis",
+        "description": "isis"
+    },
+    "2043/tcp": {
+        "name": "isis-bcast",
+        "description": "isis-bcast"
+    },
+    "2045/tcp": {
+        "name": "cdfunc"
+    },
+    "2046/tcp": {
+        "name": "sdfunc"
+    },
+    "2047/tcp": {
+        "name": "dls"
+    },
+    "2048/tcp": {
+        "name": "dls-monitor"
+    },
+    "2049/tcp": {
+        "name": "shilp"
+    },
+    "2065/tcp": {
+        "name": "dlsrpn",
+        "description": "Data Link Switch Read Port Number"
+    },
+    "2068/tcp": {
+        "name": "avauthsrvprtcl",
+        "description": "Avocent AuthSrv Protocol"
+    },
+    "2099/tcp": {
+        "name": "h2250-annex-g",
+        "description": "H.225.0 Annex G Signalling"
+    },
+    "2100/tcp": {
+        "name": "amiganetfs",
+        "description": "Amiga Network Filesystem"
+    },
+    "2103/tcp": {
+        "name": "zephyr-clt",
+        "description": "Zephyr serv-hm connection"
+    },
+    "2105/tcp": {
+        "name": "minipay",
+        "description": "MiniPay"
+    },
+    "2106/tcp": {
+        "name": "mzap",
+        "description": "MZAP"
+    },
+    "2107/tcp": {
+        "name": "bintec-admin",
+        "description": "BinTec Admin"
+    },
+    "2111/tcp": {
+        "name": "dsatp",
+        "description": "OPNET Dynamic Sampling Agent Transaction Protocol"
+    },
+    "2119/tcp": {
+        "name": "gsigatekeeper",
+        "description": "GSIGATEKEEPER"
+    },
+    "2121/tcp": {
+        "name": "scientia-ssdb",
+        "description": "SCIENTIA-SSDB"
+    },
+    "2126/tcp": {
+        "name": "pktcable-cops",
+        "description": "PktCable-COPS"
+    },
+    "2135/tcp": {
+        "name": "gris",
+        "description": "Grid Resource Information Server"
+    },
+    "2144/tcp": {
+        "name": "lv-ffx",
+        "description": "Live Vault Fast Object Transfer"
+    },
+    "2160/tcp": {
+        "name": "apc-2160",
+        "description": "APC 2160"
+    },
+    "2161/tcp": {
+        "name": "apc-2161",
+        "description": "APC 2161"
+    },
+    "2170/tcp": {
+        "name": "eyetv",
+        "description": "EyeTV Server Port"
+    },
+    "2179/tcp": {
+        "name": "vmrdp",
+        "description": "Microsoft RDP for virtual machines"
+    },
+    "2190/tcp": {
+        "name": "tivoconnect",
+        "description": "TiVoConnect Beacon"
+    },
+    "2191/tcp": {
+        "name": "tvbus",
+        "description": "TvBus Messaging"
+    },
+    "2222/tcp": {
+        "name": "EtherNet-IP-1",
+        "description": "EtherNet/IP I/O IANA assigned this well-formed service name as a replacement for \"EtherNet/IP-1\"."
+    },
+    "2251/tcp": {
+        "name": "dif-port",
+        "description": "Distributed Framework Port"
+    },
+    "2260/tcp": {
+        "name": "apc-2260",
+        "description": "APC 2260"
+    },
+    "2288/tcp": {
+        "name": "netml",
+        "description": "NETML"
+    },
+    "2301/tcp": {
+        "name": "cpq-wbem",
+        "description": "Compaq HTTP"
+    },
+    "2323/tcp": {
+        "name": "3d-nfsd",
+        "description": "3d-nfsd"
+    },
+    "2366/tcp": {
+        "name": "qip-login",
+        "description": "qip-login"
+    },
+    "2381/tcp": {
+        "name": "compaq-https",
+        "description": "Compaq HTTPS"
+    },
+    "2382/tcp": {
+        "name": "ms-olap3",
+        "description": "Microsoft OLAP"
+    },
+    "2383/tcp": {
+        "name": "ms-olap4",
+        "description": "Microsoft OLAP"
+    },
+    "2393/tcp": {
+        "name": "ms-olap1",
+        "description": "MS OLAP 1"
+    },
+    "2394/tcp": {
+        "name": "ms-olap2",
+        "description": "MS OLAP 2"
+    },
+    "2399/tcp": {
+        "name": "fmpro-fdal",
+        "description": "FileMaker, Inc. - Data Access Layer"
+    },
+    "2401/tcp": {
+        "name": "cvspserver",
+        "description": "cvspserver"
+    },
+    "2492/tcp": {
+        "name": "groove",
+        "description": "GROOVE"
+    },
+    "2500/tcp": {
+        "name": "rtsserv",
+        "description": "Resource Tracking system server"
+    },
+    "2522/tcp": {
+        "name": "windb",
+        "description": "WinDb"
+    },
+    "2525/tcp": {
+        "name": "ms-v-worlds",
+        "description": "MS V-Worlds"
+    },
+    "2557/tcp": {
+        "name": "nicetec-mgmt",
+        "description": "nicetec-mgmt"
+    },
+    "2601/tcp": {
+        "name": "discp-client",
+        "description": "discp client"
+    },
+    "2602/tcp": {
+        "name": "discp-server",
+        "description": "discp server"
+    },
+    "2604/tcp": {
+        "name": "nsc-ccs",
+        "description": "NSC CCS"
+    },
+    "2605/tcp": {
+        "name": "nsc-posa",
+        "description": "NSC POSA"
+    },
+    "2607/tcp": {
+        "name": "connection",
+        "description": "Dell Connection"
+    },
+    "2608/tcp": {
+        "name": "wag-service",
+        "description": "Wag Service"
+    },
+    "2638/tcp": {
+        "name": "sybaseanywhere",
+        "description": "Sybase Anywhere"
+    },
+    "2701/tcp": {
+        "name": "sms-rcinfo",
+        "description": "SMS RCINFO"
+    },
+    "2702/tcp": {
+        "name": "sms-xfer",
+        "description": "SMS XFER"
+    },
+    "2710/tcp": {
+        "name": "sso-service",
+        "description": "SSO Service"
+    },
+    "2717/tcp": {
+        "name": "pn-requester",
+        "description": "PN REQUESTER"
+    },
+    "2718/tcp": {
+        "name": "pn-requester2",
+        "description": "PN REQUESTER 2"
+    },
+    "2725/tcp": {
+        "name": "msolap-ptp2",
+        "description": "MSOLAP PTP2"
+    },
+    "2800/tcp": {
+        "name": "acc-raid",
+        "description": "ACC RAID"
+    },
+    "2809/tcp": {
+        "name": "corbaloc",
+        "description": "CORBA LOC"
+    },
+    "2811/tcp": {
+        "name": "gsiftp",
+        "description": "GSI FTP"
+    },
+    "2869/tcp": {
+        "name": "icslap",
+        "description": "ICSLAP"
+    },
+    "2875/tcp": {
+        "name": "dxmessagebase2",
+        "description": "DX Message Base Transport Protocol"
+    },
+    "2909/tcp": {
+        "name": "funk-dialout",
+        "description": "Funk Dialout"
+    },
+    "2910/tcp": {
+        "name": "tdaccess",
+        "description": "TDAccess"
+    },
+    "2920/tcp": {
+        "name": "roboeda",
+        "description": "roboEDA"
+    },
+    "2967/tcp": {
+        "name": "ssc-agent",
+        "description": "SSC-AGENT"
+    },
+    "2968/tcp": {
+        "name": "enpp",
+        "description": "ENPP"
+    },
+    "2998/tcp": {
+        "name": "realsecure",
+        "description": "Real Secure"
+    },
+    "3000/tcp": {
+        "name": "hbci",
+        "description": "HBCI"
+    },
+    "3001/tcp": {
+        "name": "origo-native",
+        "description": "OrigoDB Server Native Interface"
+    },
+    "3003/tcp": {
+        "name": "cgms",
+        "description": "CGMS"
+    },
+    "3005/tcp": {
+        "name": "geniuslm",
+        "description": "Genius License Manager"
+    },
+    "3006/tcp": {
+        "name": "ii-admin",
+        "description": "Instant Internet Admin"
+    },
+    "3007/tcp": {
+        "name": "lotusmtap",
+        "description": "Lotus Mail Tracking Agent Protocol"
+    },
+    "3011/tcp": {
+        "name": "trusted-web",
+        "description": "Trusted Web"
+    },
+    "3013/tcp": {
+        "name": "gilatskysurfer",
+        "description": "Gilat Sky Surfer"
+    },
+    "3017/tcp": {
+        "name": "event-listener",
+        "description": "Event Listener IANA assigned this well-formed service name as a replacement for \"event_listener\"."
+    },
+    "3030/tcp": {
+        "name": "arepa-cas",
+        "description": "Arepa Cas"
+    },
+    "3031/tcp": {
+        "name": "eppc",
+        "description": "Remote AppleEvents/PPC Toolbox"
+    },
+    "3052/tcp": {
+        "name": "apc-3052",
+        "description": "APC 3052"
+    },
+    "3071/tcp": {
+        "name": "xplat-replicate",
+        "description": "Crossplatform replication protocol"
+    },
+    "3077/tcp": {
+        "name": "orbix-loc-ssl",
+        "description": "Orbix 2000 Locator SSL"
+    },
+    "3128/tcp": {
+        "name": "ndl-aas",
+        "description": "Active API Server Port"
+    },
+    "3168/tcp": {
+        "name": "poweronnud",
+        "description": "Now Up-to-Date Public Server"
+    },
+    "3211/tcp": {
+        "name": "avsecuremgmt",
+        "description": "Avocent Secure Management"
+    },
+    "3221/tcp": {
+        "name": "xnm-clear-text",
+        "description": "XML NM over TCP"
+    },
+    "3260/tcp": {
+        "name": "iscsi-target",
+        "description": "iSCSI port"
+    },
+    "3261/tcp": {
+        "name": "winshadow",
+        "description": "winShadow"
+    },
+    "3268/tcp": {
+        "name": "msft-gc",
+        "description": "Microsoft Global Catalog"
+    },
+    "3269/tcp": {
+        "name": "msft-gc-ssl",
+        "description": "Microsoft Global Catalog with LDAP/SSL"
+    },
+    "3283/tcp": {
+        "name": "Apple Remote Desktop (Net Assistant)",
+        "description": "Net Assistant"
+    },
+    "3300/tcp": {
+        "name": "ceph",
+        "description": "Ceph monitor"
+    },
+    "3306/tcp": {
+        "name": "mysql",
+        "description": "MySQL"
+    },
+    "3333/tcp": {
+        "name": "dec-notes",
+        "description": "DEC Notes"
+    },
+    "3351/tcp": {
+        "name": "btrieve",
+        "description": "Btrieve port"
+    },
+    "3372/tcp": {
+        "name": "tip2",
+        "description": "TIP 2"
+    },
+    "3389/tcp": {
+        "name": "ms-wbt-server",
+        "description": "MS WBT Server"
+    },
+    "3390/tcp": {
+        "name": "dsc",
+        "description": "Distributed Service Coordinator"
+    },
+    "3476/tcp": {
+        "name": "nppmp",
+        "description": "NVIDIA Mgmt Protocol"
+    },
+    "3493/tcp": {
+        "name": "nut",
+        "description": "Network UPS Tools"
+    },
+    "3517/tcp": {
+        "name": "802-11-iapp",
+        "description": "IEEE 802.11 WLANs WG IAPP"
+    },
+    "3527/tcp": {
+        "name": "beserver-msg-q",
+        "description": "VERITAS Backup Exec Server"
+    },
+    "3551/tcp": {
+        "name": "apcupsd",
+        "description": "Apcupsd Information Port"
+    },
+    "3580/tcp": {
+        "name": "nati-svrloc",
+        "description": "NATI-ServiceLocator"
+    },
+    "3659/tcp": {
+        "name": "apple-sasl",
+        "description": "Apple SASL"
+    },
+    "3689/tcp": {
+        "name": "daap",
+        "description": "Digital Audio Access Protocol (iTunes)"
+    },
+    "3690/tcp": {
+        "name": "svn",
+        "description": "Subversion"
+    },
+    "3703/tcp": {
+        "name": "adobeserver-3",
+        "description": "Adobe Server 3"
+    },
+    "3737/tcp": {
+        "name": "xpanel",
+        "description": "XPanel Daemon"
+    },
+    "3766/tcp": {
+        "name": "sitewatch-s",
+        "description": "SSL e-watch sitewatch server"
+    },
+    "3784/tcp": {
+        "name": "bfd-control",
+        "description": "BFD Control Protocol"
+    },
+    "3800/tcp": {
+        "name": "pwgpsi",
+        "description": "Print Services Interface"
+    },
+    "3801/tcp": {
+        "name": "ibm-mgr",
+        "description": "ibm manager service"
+    },
+    "3809/tcp": {
+        "name": "apocd",
+        "description": "Java Desktop System Configuration Agent"
+    },
+    "3814/tcp": {
+        "name": "neto-dcs",
+        "description": "netO DCS"
+    },
+    "3826/tcp": {
+        "name": "warmux",
+        "description": "WarMUX game server"
+    },
+    "3827/tcp": {
+        "name": "netmpi",
+        "description": "Netadmin Systems MPI service"
+    },
+    "3828/tcp": {
+        "name": "neteh",
+        "description": "Netadmin Systems Event Handler"
+    },
+    "3851/tcp": {
+        "name": "spectraport",
+        "description": "SpectraTalk Port"
+    },
+    "3869/tcp": {
+        "name": "ovsam-mgmt",
+        "description": "hp OVSAM MgmtServer Disco"
+    },
+    "3871/tcp": {
+        "name": "avocent-adsap",
+        "description": "Avocent DS Authorization"
+    },
+    "3878/tcp": {
+        "name": "fotogcad",
+        "description": "FotoG CAD interface"
+    },
+    "3880/tcp": {
+        "name": "igrs",
+        "description": "IGRS"
+    },
+    "3889/tcp": {
+        "name": "dandv-tester",
+        "description": "D and V Tester Control Port"
+    },
+    "3905/tcp": {
+        "name": "mupdate",
+        "description": "Mailbox Update (MUPDATE) protocol"
+    },
+    "3914/tcp": {
+        "name": "listcrt-port-2",
+        "description": "ListCREATOR Port 2"
+    },
+    "3918/tcp": {
+        "name": "pktcablemmcops",
+        "description": "PacketCableMultimediaCOPS"
+    },
+    "3920/tcp": {
+        "name": "exasoftport1",
+        "description": "Exasoft IP Port"
+    },
+    "3945/tcp": {
+        "name": "emcads",
+        "description": "EMCADS Server Port"
+    },
+    "3971/tcp": {
+        "name": "lanrevserver",
+        "description": "LANrev Server"
+    },
+    "3986/tcp": {
+        "name": "mapper-ws-ethd",
+        "description": "MAPPER workstation server IANA assigned this well-formed service name as a replacement for \"mapper-ws_ethd\"."
+    },
+    "3995/tcp": {
+        "name": "iss-mgmt-ssl",
+        "description": "ISS Management Svcs SSL"
+    },
+    "3998/tcp": {
+        "name": "dnx",
+        "description": "Distributed Nagios Executor Service"
+    },
+    "4000/tcp": {
+        "name": "terabase",
+        "description": "Terabase"
+    },
+    "4001/tcp": {
+        "name": "newoak",
+        "description": "NewOak"
+    },
+    "4002/tcp": {
+        "name": "pxc-spvr-ft",
+        "description": "pxc-spvr-ft"
+    },
+    "4003/tcp": {
+        "name": "pxc-splr-ft",
+        "description": "pxc-splr-ft"
+    },
+    "4004/tcp": {
+        "name": "pxc-roid",
+        "description": "pxc-roid"
+    },
+    "4005/tcp": {
+        "name": "pxc-pin",
+        "description": "pxc-pin"
+    },
+    "4006/tcp": {
+        "name": "pxc-spvr",
+        "description": "pxc-spvr"
+    },
+    "4045/tcp": {
+        "name": "npp",
+        "description": "Network Paging Protocol"
+    },
+    "4111/tcp": {
+        "name": "xgrid",
+        "description": "Xgrid"
+    },
+    "4125/tcp": {
+        "name": "opsview-envoy",
+        "description": "Opsview Envoy"
+    },
+    "4126/tcp": {
+        "name": "ddrepl",
+        "description": "Data Domain Replication Service"
+    },
+    "4129/tcp": {
+        "name": "nuauth",
+        "description": "NuFW authentication protocol"
+    },
+    "4321/tcp": {
+        "name": "rwhois",
+        "description": "Remote Who Is"
+    },
+    "4343/tcp": {
+        "name": "unicall",
+        "description": "UNICALL"
+    },
+    "4443/tcp": {
+        "name": "pharos",
+        "description": "Pharos"
+    },
+    "4444/tcp": {
+        "name": "krb524",
+        "description": "KRB524"
+    },
+    "4445/tcp": {
+        "name": "upnotifyp",
+        "description": "UPNOTIFYP"
+    },
+    "4446/tcp": {
+        "name": "n1-fwp",
+        "description": "N1-FWP"
+    },
+    "4449/tcp": {
+        "name": "privatewire",
+        "description": "PrivateWire"
+    },
+    "4550/tcp": {
+        "name": "gds-adppiw-db",
+        "description": "Perman I Interbase Server"
+    },
+    "4567/tcp": {
+        "name": "tram",
+        "description": "TRAM"
+    },
+    "4662/tcp": {
+        "name": "oms",
+        "description": "OrbitNet Message Service"
+    },
+    "4848/tcp": {
+        "name": "appserv-http",
+        "description": "App Server - Admin HTTP"
+    },
+    "4899/tcp": {
+        "name": "radmin-port",
+        "description": "RAdmin Port"
+    },
+    "4900/tcp": {
+        "name": "hfcs",
+        "description": "HFSQL Client/Server Database Engine"
+    },
+    "5000/tcp": {
+        "name": "commplex-main"
+    },
+    "5001/tcp": {
+        "name": "commplex-link"
+    },
+    "5002/tcp": {
+        "name": "rfe",
+        "description": "radio free ethernet"
+    },
+    "5003/tcp": {
+        "name": "fmpro-internal",
+        "description": "FileMaker, Inc. - Proprietary transport"
+    },
+    "5004/tcp": {
+        "name": "avt-profile-1",
+        "description": "RTP media data"
+    },
+    "5009/tcp": {
+        "name": "winfs",
+        "description": "Microsoft Windows Filesystem"
+    },
+    "5030/tcp": {
+        "name": "",
+        "description": "Reserved"
+    },
+    "5033/tcp": {
+        "name": "jtnetd-server",
+        "description": "Janstor Secure Data"
+    },
+    "5050/tcp": {
+        "name": "mmcc",
+        "description": "multimedia conference control tool"
+    },
+    "5051/tcp": {
+        "name": "ita-agent",
+        "description": "ITA Agent"
+    },
+    "5054/tcp": {
+        "name": "rlm-admin",
+        "description": "RLM administrative interface"
+    },
+    "5060/tcp": {
+        "name": "sip",
+        "description": "SIP"
+    },
+    "5061/tcp": {
+        "name": "sips",
+        "description": "SIP-TLS"
+    },
+    "5080/tcp": {
+        "name": "onscreen",
+        "description": "OnScreen Data Collection Service"
+    },
+    "5087/tcp": {
+        "name": "biotic",
+        "description": "BIOTIC - Binary Internet of Things Interoperable Communication"
+    },
+    "5100/tcp": {
+        "name": "socalia",
+        "description": "Socalia service mux"
+    },
+    "5101/tcp": {
+        "name": "talarian-tcp",
+        "description": "Talarian_TCP"
+    },
+    "5102/tcp": {
+        "name": "oms-nonsecure",
+        "description": "Oracle OMS non-secure"
+    },
+    "5120/tcp": {
+        "name": "barracuda-bbs",
+        "description": "Barracuda Backup Protocol"
+    },
+    "5190/tcp": {
+        "name": "aol",
+        "description": "America-Online"
+    },
+    "5200/tcp": {
+        "name": "targus-getdata",
+        "description": "TARGUS GetData"
+    },
+    "5221/tcp": {
+        "name": "3exmp",
+        "description": "3eTI Extensible Management Protocol for OAMP"
+    },
+    "5222/tcp": {
+        "name": "xmpp-client",
+        "description": "XMPP Client Connection"
+    },
+    "5225/tcp": {
+        "name": "hp-server",
+        "description": "HP Server"
+    },
+    "5226/tcp": {
+        "name": "hp-status",
+        "description": "HP Status"
+    },
+    "5269/tcp": {
+        "name": "xmpp-server",
+        "description": "XMPP Server Connection"
+    },
+    "5280/tcp": {
+        "name": "xmpp-bosh",
+        "description": "Bidirectional-streams Over Synchronous HTTP (BOSH)"
+    },
+    "5298/tcp": {
+        "name": "presence",
+        "description": "XMPP Link-Local Messaging"
+    },
+    "5357/tcp": {
+        "name": "wsdapi",
+        "description": "Web Services for Devices"
+    },
+    "5405/tcp": {
+        "name": "netsupport",
+        "description": "NetSupport"
+    },
+    "5414/tcp": {
+        "name": "statusd",
+        "description": "StatusD"
+    },
+    "5431/tcp": {
+        "name": "park-agent",
+        "description": "PARK AGENT"
+    },
+    "5432/tcp": {
+        "name": "postgresql",
+        "description": "PostgreSQL Database"
+    },
+    "5500/tcp": {
+        "name": "fcp-addr-srvr1",
+        "description": "fcp-addr-srvr1"
+    },
+    "5550/tcp": {
+        "name": "cbus",
+        "description": "Model Railway control using the CBUS message protocol"
+    },
+    "5555/tcp": {
+        "name": "personal-agent",
+        "description": "Personal Agent"
+    },
+    "5566/tcp": {
+        "name": "westec-connect",
+        "description": "Westec Connect"
+    },
+    "5631/tcp": {
+        "name": "pcanywheredata",
+        "description": "pcANYWHEREdata"
+    },
+    "5633/tcp": {
+        "name": "beorl",
+        "description": "BE Operations Request Listener"
+    },
+    "5666/tcp": {
+        "name": "nrpe",
+        "description": "Nagios Remote Plugin Executor"
+    },
+    "5678/tcp": {
+        "name": "rrac",
+        "description": "Remote Replication Agent Connection"
+    },
+    "5679/tcp": {
+        "name": "dccm",
+        "description": "Direct Cable Connect Manager"
+    },
+    "5718/tcp": {
+        "name": "dpm",
+        "description": "DPM Communication Server"
+    },
+    "5730/tcp": {
+        "name": "unieng",
+        "description": "Steltor's calendar access"
+    },
+    "5859/tcp": {
+        "name": "wherehoo",
+        "description": "WHEREHOO"
+    },
+    "5900/tcp": {
+        "name": "rfb",
+        "description": "Remote Framebuffer"
+    },
+    "5910/tcp": {
+        "name": "ats-atn",
+        "description": "Air Traffic Services applications using ATN"
+    },
+    "5911/tcp": {
+        "name": "ats-acars",
+        "description": "Air Traffic Services applications using ACARS"
+    },
+    "5963/tcp": {
+        "name": "indy",
+        "description": "Indy Application Server"
+    },
+    "5987/tcp": {
+        "name": "wbem-rmi",
+        "description": "WBEM RMI"
+    },
+    "5988/tcp": {
+        "name": "wbem-http",
+        "description": "WBEM CIM-XML (HTTP)"
+    },
+    "5989/tcp": {
+        "name": "wbem-https",
+        "description": "WBEM CIM-XML (HTTPS)"
+    },
+    "5999/tcp": {
+        "name": "cvsup",
+        "description": "CVSup"
+    },
+    "6100/tcp": {
+        "name": "synchronet-db",
+        "description": "SynchroNet-db"
+    },
+    "6101/tcp": {
+        "name": "synchronet-rtc",
+        "description": "SynchroNet-rtc"
+    },
+    "6106/tcp": {
+        "name": "mpsserver",
+        "description": "MPS Server"
+    },
+    "6112/tcp": {
+        "name": "dtspcd",
+        "description": "Desk-Top Sub-Process Control Daemon"
+    },
+    "6123/tcp": {
+        "name": "backup-express",
+        "description": "Backup Express"
+    },
+    "6346/tcp": {
+        "name": "gnutella-svc",
+        "description": "gnutella-svc"
+    },
+    "6389/tcp": {
+        "name": "clariion-evr01",
+        "description": "clariion-evr01"
+    },
+    "6502/tcp": {
+        "name": "boks-servm",
+        "description": "BoKS Servm IANA assigned this well-formed service name as a replacement for \"boks_servm\"."
+    },
+    "6510/tcp": {
+        "name": "mcer-port",
+        "description": "MCER Port"
+    },
+    "6543/tcp": {
+        "name": "lds-distrib",
+        "description": "lds_distrib"
+    },
+    "6547/tcp": {
+        "name": "apc-6547",
+        "description": "APC 6547"
+    },
+    "6566/tcp": {
+        "name": "sane-port",
+        "description": "SANE Control Port"
+    },
+    "6580/tcp": {
+        "name": "parsec-master",
+        "description": "Parsec Masterserver"
+    },
+    "6689/tcp": {
+        "name": "tsa",
+        "description": "Tofino Security Appliance"
+    },
+    "6788/tcp": {
+        "name": "smc-http",
+        "description": "SMC-HTTP"
+    },
+    "6789/tcp": {
+        "name": "radg",
+        "description": "GSS-API for the Oracle Remote Administration Daemon"
+    },
+    "6901/tcp": {
+        "name": "jetstream",
+        "description": "Novell Jetstream messaging protocol"
+    },
+    "6969/tcp": {
+        "name": "acmsoda",
+        "description": "acmsoda"
+    },
+    "7000/tcp": {
+        "name": "afs3-fileserver",
+        "description": "file server itself"
+    },
+    "7001/tcp": {
+        "name": "afs3-callback",
+        "description": "callbacks to cache managers"
+    },
+    "7002/tcp": {
+        "name": "afs3-prserver",
+        "description": "users & groups database"
+    },
+    "7004/tcp": {
+        "name": "afs3-kaserver",
+        "description": "AFS/Kerberos authentication service"
+    },
+    "7007/tcp": {
+        "name": "afs3-bos",
+        "description": "basic overseer process"
+    },
+    "7019/tcp": {
+        "name": "doceri-ctl",
+        "description": "doceri drawing service control"
+    },
+    "7025/tcp": {
+        "name": "vmsvc-2",
+        "description": "Vormetric Service II"
+    },
+    "7070/tcp": {
+        "name": "arcp",
+        "description": "ARCP"
+    },
+    "7100/tcp": {
+        "name": "font-service",
+        "description": "X Font Service"
+    },
+    "7200/tcp": {
+        "name": "fodms",
+        "description": "FODMS FLIP"
+    },
+    "7201/tcp": {
+        "name": "dlip",
+        "description": "DLIP"
+    },
+    "7402/tcp": {
+        "name": "rtps-dd-mt",
+        "description": "RTPS Data-Distribution Meta-Traffic"
+    },
+    "7443/tcp": {
+        "name": "oracleas-https",
+        "description": "Oracle Application Server HTTPS"
+    },
+    "7627/tcp": {
+        "name": "soap-http",
+        "description": "SOAP Service Port"
+    },
+    "7676/tcp": {
+        "name": "imqbrokerd",
+        "description": "iMQ Broker Rendezvous"
+    },
+    "7741/tcp": {
+        "name": "scriptview",
+        "description": "ScriptView Network"
+    },
+    "7777/tcp": {
+        "name": "cbt",
+        "description": "cbt"
+    },
+    "7778/tcp": {
+        "name": "interwise",
+        "description": "Interwise"
+    },
+    "7800/tcp": {
+        "name": "asr",
+        "description": "Apple Software Restore"
+    },
+    "7999/tcp": {
+        "name": "irdmi2",
+        "description": "iRDMI2"
+    },
+    "8000/tcp": {
+        "name": "irdmi",
+        "description": "iRDMI"
+    },
+    "8001/tcp": {
+        "name": "vcom-tunnel",
+        "description": "VCOM Tunnel"
+    },
+    "8002/tcp": {
+        "name": "teradataordbms",
+        "description": "Teradata ORDBMS"
+    },
+    "8007/tcp": {
+        "name": "warppipe",
+        "description": "I/O oriented cluster computing software"
+    },
+    "8008/tcp": {
+        "name": "http-alt",
+        "description": "HTTP Alternate"
+    },
+    "8009/tcp": {
+        "name": "nvme-disc",
+        "description": "NVMe over Fabrics Discovery Service"
+    },
+    "8021/tcp": {
+        "name": "intu-ec-client",
+        "description": "Intuit Entitlement Client"
+    },
+    "8022/tcp": {
+        "name": "oa-system",
+        "description": "oa-system"
+    },
+    "8042/tcp": {
+        "name": "fs-agent",
+        "description": "FireScope Agent"
+    },
+    "8080/tcp": {
+        "name": "http-alt",
+        "description": "HTTP Alternate (see port 80)"
+    },
+    "8081/tcp": {
+        "name": "sunproxyadmin",
+        "description": "Sun Proxy Admin Service"
+    },
+    "8082/tcp": {
+        "name": "us-cli",
+        "description": "Utilistor (Client)"
+    },
+    "8083/tcp": {
+        "name": "us-srv",
+        "description": "Utilistor (Server)"
+    },
+    "8084/tcp": {
+        "name": "websnp",
+        "description": "Snarl Network Protocol over HTTP"
+    },
+    "8086/tcp": {
+        "name": "d-s-n",
+        "description": "Distributed SCADA Networking Rendezvous Port"
+    },
+    "8087/tcp": {
+        "name": "simplifymedia",
+        "description": "Simplify Media SPP Protocol"
+    },
+    "8088/tcp": {
+        "name": "radan-http",
+        "description": "Radan HTTP"
+    },
+    "8090/tcp": {
+        "name": "opsmessaging",
+        "description": "Vehicle to station messaging"
+    },
+    "8100/tcp": {
+        "name": "xprint-server",
+        "description": "Xprint Server"
+    },
+    "8181/tcp": {
+        "name": "intermapper",
+        "description": "Intermapper network management system"
+    },
+    "8192/tcp": {
+        "name": "spytechphone",
+        "description": "SpyTech Phone Service"
+    },
+    "8194/tcp": {
+        "name": "blp1",
+        "description": "Bloomberg data API"
+    },
+    "8200/tcp": {
+        "name": "trivnet1",
+        "description": "TRIVNET"
+    },
+    "8292/tcp": {
+        "name": "blp3",
+        "description": "Bloomberg professional"
+    },
+    "8300/tcp": {
+        "name": "tmi",
+        "description": "Transport Management Interface"
+    },
+    "8383/tcp": {
+        "name": "m2mservices",
+        "description": "M2m Services"
+    },
+    "8400/tcp": {
+        "name": "cvd",
+        "description": "cvd"
+    },
+    "8402/tcp": {
+        "name": "abarsd",
+        "description": "abarsd"
+    },
+    "8443/tcp": {
+        "name": "pcsync-https",
+        "description": "PCsync HTTPS"
+    },
+    "8500/tcp": {
+        "name": "fmtp",
+        "description": "Flight Message Transfer Protocol"
+    },
+    "8600/tcp": {
+        "name": "asterix",
+        "description": "Surveillance Data"
+    },
+    "8800/tcp": {
+        "name": "sunwebadmin",
+        "description": "Sun Web Server Admin Service"
+    },
+    "8873/tcp": {
+        "name": "dxspider",
+        "description": "dxspider linking protocol"
+    },
+    "8888/tcp": {
+        "name": "ddi-tcp-1",
+        "description": "NewsEDGE server TCP (TCP 1)"
+    },
+    "8899/tcp": {
+        "name": "ospf-lite",
+        "description": "ospf-lite"
+    },
+    "9000/tcp": {
+        "name": "cslistener",
+        "description": "CSlistener"
+    },
+    "9001/tcp": {
+        "name": "etlservicemgr",
+        "description": "ETL Service Manager"
+    },
+    "9002/tcp": {
+        "name": "dynamid",
+        "description": "DynamID authentication"
+    },
+    "9009/tcp": {
+        "name": "pichat",
+        "description": "Pichat Server"
+    },
+    "9010/tcp": {
+        "name": "sdr",
+        "description": "Secure Data Replicator Protocol"
+    },
+    "9050/tcp": {
+        "name": "versiera",
+        "description": "Versiera Agent Listener"
+    },
+    "9080/tcp": {
+        "name": "glrpc",
+        "description": "Groove GLRPC"
+    },
+    "9090/tcp": {
+        "name": "websm",
+        "description": "WebSM"
+    },
+    "9091/tcp": {
+        "name": "xmltec-xmlmail",
+        "description": "xmltec-xmlmail"
+    },
+    "9100/tcp": {
+        "name": "hp-pdl-datastr",
+        "description": "PDL Data Streaming Port"
+    },
+    "9101/tcp": {
+        "name": "bacula-dir",
+        "description": "Bacula Director"
+    },
+    "9102/tcp": {
+        "name": "bacula-fd",
+        "description": "Bacula File Daemon"
+    },
+    "9103/tcp": {
+        "name": "bacula-sd",
+        "description": "Bacula Storage Daemon"
+    },
+    "9111/tcp": {
+        "name": "hexxorecore",
+        "description": "Multiple Purpose, Distributed Message Bus"
+    },
+    "9200/tcp": {
+        "name": "wap-wsp",
+        "description": "WAP connectionless session service"
+    },
+    "9207/tcp": {
+        "name": "wap-vcal-s",
+        "description": "WAP vCal Secure"
+    },
+    "9418/tcp": {
+        "name": "git",
+        "description": "git pack transfer service"
+    },
+    "9500/tcp": {
+        "name": "ismserver",
+        "description": "ismserver"
+    },
+    "9535/tcp": {
+        "name": "mngsuite",
+        "description": "Management Suite Remote Control"
+    },
+    "9593/tcp": {
+        "name": "cba8",
+        "description": "LANDesk Management Agent (cba8)"
+    },
+    "9594/tcp": {
+        "name": "msgsys",
+        "description": "Message System"
+    },
+    "9595/tcp": {
+        "name": "pds",
+        "description": "Ping Discovery Service"
+    },
+    "9618/tcp": {
+        "name": "condor",
+        "description": "Condor Collector Service"
+    },
+    "9666/tcp": {
+        "name": "zoomcp",
+        "description": "Zoom Control Panel Game Server Management"
+    },
+    "9876/tcp": {
+        "name": "sd",
+        "description": "Session Director"
+    },
+    "9877/tcp": {
+        "name": "x510",
+        "description": "The X.510 wrapper protocol"
+    },
+    "9898/tcp": {
+        "name": "monkeycom",
+        "description": "MonkeyCom"
+    },
+    "9900/tcp": {
+        "name": "iua",
+        "description": "IUA"
+    },
+    "9998/tcp": {
+        "name": "distinct32",
+        "description": "Distinct32"
+    },
+    "9999/tcp": {
+        "name": "distinct",
+        "description": "distinct"
+    },
+    "10000/tcp": {
+        "name": "ndmp",
+        "description": "Network Data Management Protocol"
+    },
+    "10001/tcp": {
+        "name": "scp-config",
+        "description": "SCP Configuration"
+    },
+    "10002/tcp": {
+        "name": "documentum",
+        "description": "EMC-Documentum Content Server Product"
+    },
+    "10003/tcp": {
+        "name": "documentum-s",
+        "description": "EMC-Documentum Content Server Product IANA assigned this well-formed service name as a replacement for \"documentum_s\"."
+    },
+    "10004/tcp": {
+        "name": "emcrmirccd",
+        "description": "EMC Replication Manager Client"
+    },
+    "10009/tcp": {
+        "name": "swdtp-sv",
+        "description": "Systemwalker Desktop Patrol"
+    },
+    "10010/tcp": {
+        "name": "rxapi",
+        "description": "ooRexx rxapi services"
+    },
+    "11110/tcp": {
+        "name": "sgi-soap",
+        "description": "Data migration facility (DMF) SOAP is a web server protocol to support remote access to DMF"
+    },
+    "11111/tcp": {
+        "name": "vce",
+        "description": "Viral Computing Environment (VCE)"
+    },
+    "11967/tcp": {
+        "name": "sysinfo-sp",
+        "description": "SysInfo Service Protocol"
+    },
+    "12000/tcp": {
+        "name": "entextxid",
+        "description": "IBM Enterprise Extender SNA XID Exchange"
+    },
+    "12345/tcp": {
+        "name": "italk",
+        "description": "Italk Chat System"
+    },
+    "13722/tcp": {
+        "name": "bpjava-msvc",
+        "description": "BP Java MSVC Protocol"
+    },
+    "13782/tcp": {
+        "name": "bpcd",
+        "description": "VERITAS NetBackup"
+    },
+    "13783/tcp": {
+        "name": "vopied",
+        "description": "VOPIED Protocol"
+    },
+    "14000/tcp": {
+        "name": "scotty-ft",
+        "description": "SCOTTY High-Speed Filetransfer"
+    },
+    "15000/tcp": {
+        "name": "hydap",
+        "description": "Hypack Data Aquisition"
+    },
+    "15002/tcp": {
+        "name": "onep-tls",
+        "description": "Open Network Environment TLS"
+    },
+    "15660/tcp": {
+        "name": "bex-xr",
+        "description": "Backup Express Restore Server"
+    },
+    "16000/tcp": {
+        "name": "fmsas",
+        "description": "Administration Server Access"
+    },
+    "16001/tcp": {
+        "name": "fmsascon",
+        "description": "Administration Server Connector"
+    },
+    "16992/tcp": {
+        "name": "amt-soap-http",
+        "description": "Intel(R) AMT SOAP/HTTP"
+    },
+    "16993/tcp": {
+        "name": "amt-soap-https",
+        "description": "Intel(R) AMT SOAP/HTTPS"
+    },
+    "19283/tcp": {
+        "name": "keysrvr",
+        "description": "Key Server for SASSAFRAS"
+    },
+    "19315/tcp": {
+        "name": "keyshadow",
+        "description": "Key Shadow for SASSAFRAS"
+    },
+    "20000/tcp": {
+        "name": "dnp",
+        "description": "DNP"
+    },
+    "20005/tcp": {
+        "name": "openwebnet",
+        "description": "OpenWebNet protocol for electric network"
+    },
+    "20222/tcp": {
+        "name": "ipulse-ics",
+        "description": "iPulse-ICS"
+    },
+    "30000/tcp": {
+        "name": "ndmps",
+        "description": "Secure Network Data Management Protocol"
+    },
+    "32768/tcp": {
+        "name": "filenet-tms",
+        "description": "Filenet TMS"
+    },
+    "32769/tcp": {
+        "name": "filenet-rpc",
+        "description": "Filenet RPC"
+    },
+    "32770/tcp": {
+        "name": "filenet-nch",
+        "description": "Filenet NCH"
+    },
+    "32771/tcp": {
+        "name": "filenet-rmi",
+        "description": "FileNET RMI"
+    },
+    "32772/tcp": {
+        "name": "filenet-pa",
+        "description": "FileNET Process Analyzer"
+    },
+    "32773/tcp": {
+        "name": "filenet-cm",
+        "description": "FileNET Component Manager"
+    },
+    "32774/tcp": {
+        "name": "filenet-re",
+        "description": "FileNET Rules Engine"
+    },
+    "32775/tcp": {
+        "name": "filenet-pch",
+        "description": "Performance Clearinghouse"
+    },
+    "32776/tcp": {
+        "name": "filenet-peior",
+        "description": "FileNET BPM IOR"
+    },
+    "32777/tcp": {
+        "name": "filenet-obrok",
+        "description": "FileNet BPM CORBA"
+    },
+    "42510/tcp": {
+        "name": "caerpc",
+        "description": "CA eTrust RPC"
+    }
+}
