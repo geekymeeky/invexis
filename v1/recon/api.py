@@ -2,6 +2,7 @@ from typing import Annotated
 from fastapi import Query
 from fastapi.routing import APIRouter
 from lib.recon.dnsscan import DNSScanner
+from lib.recon.file_inclusion.file_inclusion import FileInclusionScanner
 from lib.recon.port_scanner.port_scanner import PORT_SCANNER_MODES, PortScanner
 from lib.recon.security_headers import SecurityHeaders
 from lib.recon.ssl_scanner import SSLScanner
@@ -15,6 +16,22 @@ router: APIRouter = APIRouter(
 )
 
 
+
+@router.post("/dns")
+async def dns(url: Annotated[str, Query(..., regex="^https?://")]):
+    domain = parse_url(url).host
+    scanner = DNSScanner(domain)
+    analysis = scanner.scan()
+    return analysis
+
+
+@router.post("/file-inclusion")
+async def file_inclusion(url: Annotated[str, Query(..., regex="^https?://")]):
+    scanner = FileInclusionScanner(url)
+    analysis = scanner.scan()
+    return analysis
+
+
 @router.post("/port-scan")
 def port_scan(url:str,
               mode: PORT_SCANNER_MODES):
@@ -22,14 +39,6 @@ def port_scan(url:str,
     analysis = scanner.scan()
     return analysis
 
-@router.post("/dns")
-async def dns(url: Annotated[str, Query(..., regex="^https?://")]):
-    domain = parse_url(url).host
-    print(domain)
-
-    scanner = DNSScanner(domain)
-    analysis = scanner.scan()
-    return analysis
 
 @router.post("/security-headers")
 async def security_headers(url: Annotated[str,
