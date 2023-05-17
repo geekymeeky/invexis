@@ -1,6 +1,7 @@
 from typing import Annotated
 from fastapi import Query
 from fastapi.routing import APIRouter
+from lib.recon.cors_misconfig.cors_scanner import CorsMisconfigScanner
 from lib.recon.dnsscan import DNSScanner
 from lib.recon.port_scanner.port_scanner import PORT_SCANNER_MODES, PortScanner
 from lib.recon.security_headers import SecurityHeaders
@@ -15,12 +16,20 @@ router: APIRouter = APIRouter(
 )
 
 
+@router.post("/cors-misconfiguration")
+async def cors_misconfiguration(
+        url: Annotated[str, Query(..., regex="^https?://")]):
+    scanner = CorsMisconfigScanner(url)
+    analysis = scanner.scan()
+    return analysis
+
+
 @router.post("/port-scan")
-def port_scan(url:str,
-              mode: PORT_SCANNER_MODES):
+def port_scan(url: str, mode: PORT_SCANNER_MODES):
     scanner = PortScanner(url, mode)
     analysis = scanner.scan()
     return analysis
+
 
 @router.post("/dns")
 async def dns(url: Annotated[str, Query(..., regex="^https?://")]):
@@ -30,6 +39,7 @@ async def dns(url: Annotated[str, Query(..., regex="^https?://")]):
     scanner = DNSScanner(domain)
     analysis = scanner.scan()
     return analysis
+
 
 @router.post("/security-headers")
 async def security_headers(url: Annotated[str,
@@ -42,7 +52,6 @@ async def security_headers(url: Annotated[str,
 async def ssl_scanner(url: Annotated[str, Query(..., regex="^https?://")]):
     analysis = SSLScanner(url).scan()  # type: ignore
     return analysis
-
 
 
 @router.post("/subdomain")
