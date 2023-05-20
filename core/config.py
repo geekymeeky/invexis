@@ -18,25 +18,7 @@ class Settings(BaseSettings):
             return v
         raise ValueError(v)
 
-    MONGO_SERVER: str
-    MONGO_USER: str
-    MONGO_PASSWORD: str
-    MONGO_DB: str
-    DATABASE_URI: Optional[MongoDsn] = None
-
-    @validator("DATABASE_URI", pre=True)
-    def assemble_db_connection(cls, v: Optional[str],
-                               values: Dict[str, Any]) -> Any:
-        if isinstance(v, str):
-            return v
-        return MongoDsn.build(
-            scheme="mongodb",
-            user=values.get("MONGO_USER"),
-            password=values.get("MONGO_PASSWORD"),
-            host=values.get("MONGO_SERVER"),
-            path=f"/{values.get('MONGO_DB') or ''}",
-        )
-
+    MONGO_URI: str
     API_V1_STR: str = "/api/v1"
 
     @validator("API_V1_STR", pre=True)

@@ -4,6 +4,8 @@ import sentry_sdk
 
 from core.config import settings
 
+from motor.motor_asyncio import AsyncIOMotorClient
+
 from v1.home.api import router as home_router
 from v1.recon.api import router as recon_router
 
@@ -40,6 +42,15 @@ def init() -> FastAPI:
         allow_methods=["*"],
         allow_headers=["*"],
     )
+
+    @_app.on_event("startup")
+    def startup():
+        _app.mongodb_client = AsyncIOMotorClient(settings.MONGO_URI)
+        _app.mongodb = _app.mongodb_client[settings.MONGO_DB]
+
+    @_app.on_event("shutdown")
+    def shutdown():
+        _app.mongodb_client.close()
 
     _app.include_router(home_router, prefix=settings.API_V1_STR)
     _app.include_router(recon_router, prefix=settings.API_V1_STR)
