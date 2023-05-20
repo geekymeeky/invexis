@@ -20,6 +20,8 @@ class Settings(BaseSettings):
 
     MONGO_URI: str
     MONGO_DB: str
+    JWT_SECRET: str
+    JWT_ALGORITHM: str
     API_V1_STR: str = "/api/v1"
 
     @validator("API_V1_STR", pre=True)

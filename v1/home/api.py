@@ -1,5 +1,6 @@
-from fastapi import Request
+from fastapi import Depends, Request
 from fastapi.routing import APIRouter
+from lib.auth.auth_bearer import JWTBearer
 
 from lib.shared.utils import get_timestamp
 
@@ -12,7 +13,7 @@ router: APIRouter = APIRouter(
 last_updated: str = get_timestamp()
 
 
-@router.get("/")
+@router.get("/", dependencies=[Depends(JWTBearer())])
 async def home(request: Request):
     return {
         "message": "Welcome to the Security Headers API",
