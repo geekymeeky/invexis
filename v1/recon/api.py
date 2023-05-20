@@ -33,10 +33,8 @@ def port_scan(url: str, mode: PORT_SCANNER_MODES):
 
 @router.post("/dns")
 async def dns(url: Annotated[str, Query(..., regex="^https?://")]):
-    domain = parse_url(url).host
-    print(domain)
-
-    scanner = DNSScanner(domain)
+    host = parse_url(url).hostname
+    scanner = DNSScanner(host)
     analysis = scanner.scan()
     return analysis
 

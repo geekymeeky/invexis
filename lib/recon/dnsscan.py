@@ -3,11 +3,19 @@ import dns.message
 import dns.flags
 import dns.rcode
 
+dns.resolver.Cache.flush = lambda self: None
+
 
 class DNSScanner:
 
-    def __init__(self, domain):
-        self.domain = domain
+    def getDomainFromHost(self, host):
+        domain = host
+        if domain.count('.') > 1:
+            domain = domain[domain.find('.') + 1:]
+        return domain
+
+    def __init__(self, host):
+        self.domain = self.getDomainFromHost(host)
         self.ns = []
         self.mx = []
         self.txt = []
