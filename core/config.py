@@ -19,6 +19,7 @@ class Settings(BaseSettings):
         raise ValueError(v)
 
     MONGO_URI: str
+    MONGO_DB: str
     API_V1_STR: str = "/api/v1"
 
     @validator("API_V1_STR", pre=True)
