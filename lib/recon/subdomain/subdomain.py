@@ -23,11 +23,10 @@ class SubdomainEnum:
             else:
                 return False
         except Exception as e:
-
-            print(e)
+            pass
 
     def run(self):
-        with ThreadPoolExecutor(max_workers=20) as executor:
+        with ThreadPoolExecutor(max_workers=4) as executor:
             futures = [
                 executor.submit(self._verifyIfExist,
                                 f'http://{subdomain}.{self.target.host}')

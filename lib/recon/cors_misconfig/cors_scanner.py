@@ -45,18 +45,16 @@ class CorsMisconfigScanner(Scanner):
         self.results = {}
 
     def scan(self):
-        threadpool = ThreadPoolExecutor(max_workers=100)
+        threadpool = ThreadPoolExecutor(max_workers=2)
         future = threadpool.submit(self.cors)
         result = future.result()
         if result:
             self.results.update(result)
-            return self.results
+            return self.results[self.url]
         else:
             return {
-                self.url: {
-                    'status': 'not vulnerable',
-                    'details': 'No CORS misconfiguration found'
-                }
+                'status': 'not vulnerable',
+                'details': 'No CORS misconfiguration found'
             }
 
     def cors(self):

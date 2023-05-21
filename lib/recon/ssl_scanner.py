@@ -53,8 +53,7 @@ class SSLScanner(Scanner):
                         cert_data.not_valid_after.isoformat(),
                         "algorithm":
                         cert_data.signature_hash_algorithm.name,
-                        "serial_number":
-                        cert_data.serial_number,
+                        "serial_number": str(cert_data.serial_number),
                         "version":
                         cert_data.version.name,
                         "public_key":
