@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Annotated
 from fastapi import Depends, Query, Request
 from fastapi.routing import APIRouter
@@ -14,7 +15,6 @@ from fastapi import BackgroundTasks
 from bson.objectid import ObjectId
 import pydantic
 from bson import json_util
-from concurrent.futures import ThreadPoolExecutor
 from lib.constants.collections import *
 pydantic.json.ENCODERS_BY_TYPE[ObjectId]=str
 
@@ -140,7 +140,8 @@ async def new_scans(request: Request, background_tasks: BackgroundTasks, url: An
         "dns": "pending",
         "securityHeaders": "pending",
         "ssl": "pending",
-        "subdomains": "pending"
+        # "subdomains": "pending"
+        "created_at": datetime.utcnow()
     }
     report = await request.app.mongodb[SCANS_COLLECTION].insert_one(payload)
     if report:
@@ -149,7 +150,7 @@ async def new_scans(request: Request, background_tasks: BackgroundTasks, url: An
         background_tasks.add_task(dns, request, url, str(report.inserted_id), credentials)
         background_tasks.add_task(security_headers, request, url, str(report.inserted_id), credentials)
         background_tasks.add_task(ssl_scanner, request, url, str(report.inserted_id), credentials)
-        background_tasks.add_task(subdomain, request, url, str(report.inserted_id), credentials)
+        # background_tasks.add_task(subdomain, request, url, str(report.inserted_id), credentials)
 
         return {"message": "Scan started successfully.", "id":  str(report.inserted_id)}
     else:
