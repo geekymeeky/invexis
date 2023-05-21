@@ -13,8 +13,11 @@ router: APIRouter = APIRouter(
 last_updated: str = get_timestamp()
 
 
-@router.get("/", dependencies=[Depends(JWTBearer())])
-async def home(request: Request):
+@router.get("/")
+async def home(request: Request, credentials: tuple = Depends(JWTBearer())):
+    user, token = credentials
+    print(f"User: {user}")
+    print(f"Token: {token}")
     return {
         "message": "Welcome to the Security Headers API",
         "last_updated": last_updated,
