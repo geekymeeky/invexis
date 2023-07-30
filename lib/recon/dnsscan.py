@@ -23,7 +23,7 @@ class DNSScanner:
         self.spf = []
         self.dmarc = []
         self.dnssec = False
-        self.ddos = dict()
+        self.ddos = {}
         self.issues = []
 
     def scan(self):
@@ -88,8 +88,7 @@ class DNSScanner:
 
     def _get_srv(self):
         try:
-            srv_answers = dns.resolver.resolve('_sip._tcp.' + self.domain,
-                                               'SRV')
+            srv_answers = dns.resolver.resolve(f'_sip._tcp.{self.domain}', 'SRV')
             for srv_rdata in srv_answers:
                 self.srv.append(str(srv_rdata.target).rstrip('.'))
         except:
@@ -108,9 +107,7 @@ class DNSScanner:
     def _is_same_subnet(self, ip1, ip2):
         ip1 = ip1.split('.')
         ip2 = ip2.split('.')
-        if ip1[0] == ip2[0] and ip1[1] == ip2[1] and ip1[2] == ip2[2]:
-            return True
-        return False
+        return ip1[0] == ip2[0] and ip1[1] == ip2[1] and ip1[2] == ip2[2]
 
     def _check_dns_security(self):
 

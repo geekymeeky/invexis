@@ -18,8 +18,7 @@ class SecurityHeaders(Scanner):
         Returns:
             dict: Analysis of security headers
         """
-        analysis = {}
-        analysis['X-XSS-Protection'] = self._check_xss_protection()
+        analysis = {'X-XSS-Protection': self._check_xss_protection()}
         analysis[
             'Content-Security-Policy'] = self._check_content_security_policy()
         analysis[
@@ -35,8 +34,7 @@ class SecurityHeaders(Scanner):
         Returns:
             dict: Analysis of X-XSS-Protection header
         """
-        xss_protection = self.headers.get('X-XSS-Protection')
-        if xss_protection:
+        if xss_protection := self.headers.get('X-XSS-Protection'):
             return {'status': "enabled", 'policy': xss_protection}
         else:
             return {
@@ -54,8 +52,7 @@ class SecurityHeaders(Scanner):
         Returns:
             dict: Analysis of Content-Security-Policy header
         """
-        content_security_policy = self.headers.get('Content-Security-Policy')
-        if content_security_policy:
+        if content_security_policy := self.headers.get('Content-Security-Policy'):
             return {
                 'status': "enabled",
                 'policy': content_security_policy,
@@ -76,25 +73,11 @@ class SecurityHeaders(Scanner):
         Returns:
             dict: Analysis of Strict-Transport-Security header
         """
-        strict_transport_security = self.headers.get(
-            'Strict-Transport-Security')
-        if strict_transport_security:
-            analysis = {
-                'status': "enabled",
-                'policy': strict_transport_security,
-            }
-            max_age = strict_transport_security.split('max-age=')[1].split(
-                ';')[0]
-            if int(max_age) < 31536000:
-                analysis = {
-                    'status': "enabled",
-                    'policy': strict_transport_security,
-                    'solution':
-                    'Increase max-age to at least 31536000 seconds (1 year) to ensure long-term protection against protocol downgrade attacks',
-                    'severity': 'medium'
-                }
-            return analysis
-        else:
+        if not (
+            strict_transport_security := self.headers.get(
+                'Strict-Transport-Security'
+            )
+        ):
             return {
                 'status': "not set",
                 'policy': 'not set',
@@ -102,6 +85,21 @@ class SecurityHeaders(Scanner):
                 'Set Strict-Transport-Security header to enable HTTPS-only mode and protect against protocol downgrade attacks',
                 'severity': 'high'
             }
+        analysis = {
+            'status': "enabled",
+            'policy': strict_transport_security,
+        }
+        max_age = strict_transport_security.split('max-age=')[1].split(
+            ';')[0]
+        if int(max_age) < 31536000:
+            analysis = {
+                'status': "enabled",
+                'policy': strict_transport_security,
+                'solution':
+                'Increase max-age to at least 31536000 seconds (1 year) to ensure long-term protection against protocol downgrade attacks',
+                'severity': 'medium'
+            }
+        return analysis
 
     @exception()
     def _check_x_frame_options(self):
@@ -110,26 +108,24 @@ class SecurityHeaders(Scanner):
         Returns:
             dict: Analysis of X-Frame-Options header
         """
-        x_frame_options = self.headers.get('X-Frame-Options')
-        if x_frame_options:
-            analysis = x_frame_options
-            if x_frame_options != 'DENY' and x_frame_options != 'SAMEORIGIN':
-                analysis = {
-                    'status': x_frame_options,
-                    'solution':
-                    'Set X-Frame-Options header to DENY or SAMEORIGIN to prevent clickjacking attacks',
-                    'severity': 'medium'
-                }
-            else:
-                analysis = {
-                    'status': 'enabled',
-                    'policy': x_frame_options,
-                }
-            return analysis
-        else:
+        if not (x_frame_options := self.headers.get('X-Frame-Options')):
             return {
                 'status': 'not set',
                 'solution':
                 'Set X-Frame-Options header to DENY or SAMEORIGIN to prevent clickjacking attacks',
                 'severity': 'high'
             }
+        analysis = x_frame_options
+        analysis = (
+            {
+                'status': x_frame_options,
+                'solution': 'Set X-Frame-Options header to DENY or SAMEORIGIN to prevent clickjacking attacks',
+                'severity': 'medium',
+            }
+            if x_frame_options not in ['DENY', 'SAMEORIGIN']
+            else {
+                'status': 'enabled',
+                'policy': x_frame_options,
+            }
+        )
+        return analysis

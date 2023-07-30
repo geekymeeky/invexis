@@ -38,8 +38,7 @@ class CorsMisconfigScanner(Scanner):
         self.netloc = self.parsed.netloc
         self.scheme = self.parsed.scheme
 
-        self.url = self.scheme + "://" + self.netloc + (self.parsed.path
-                                                        or '/')
+        self.url = f"{self.scheme}://{self.netloc}" + (self.parsed.path or '/')
 
         self.delay = 0.5
         self.results = {}
@@ -47,8 +46,7 @@ class CorsMisconfigScanner(Scanner):
     def scan(self):
         threadpool = ThreadPoolExecutor(max_workers=2)
         future = threadpool.submit(self.cors)
-        result = future.result()
-        if result:
+        if result := future.result():
             self.results.update(result)
             return self.results[self.url]
         else:
@@ -65,7 +63,7 @@ class CorsMisconfigScanner(Scanner):
             print("Connection error: ", exc)
 
     def active_tests(self, url, root, scheme, header_dict, delay):
-        origin = scheme + '://' + root
+        origin = f'{scheme}://{root}'
         headers = self._requester(url, scheme, header_dict, origin)
         acao_header, acac_header = headers.get(
             'access-control-allow-origin',
@@ -73,7 +71,7 @@ class CorsMisconfigScanner(Scanner):
         if acao_header is None:
             return
 
-        origin = scheme + '://' + 'example.com'
+        origin = f'{scheme}://example.com'
         headers = self._requester(url, scheme, header_dict, origin)
         acao_header, acac_header = headers.get(
             'access-control-allow-origin',
@@ -85,7 +83,7 @@ class CorsMisconfigScanner(Scanner):
             return {url: info}
         time.sleep(delay)
 
-        origin = scheme + '://' + root + '.example.com'
+        origin = f'{scheme}://{root}.example.com'
         headers = self._requester(url, scheme, header_dict, origin)
         acao_header, acac_header = headers.get(
             'access-control-allow-origin',
@@ -97,7 +95,7 @@ class CorsMisconfigScanner(Scanner):
             return {url: info}
         time.sleep(delay)
 
-        origin = scheme + '://d3v' + root
+        origin = f'{scheme}://d3v{root}'
         headers = self._requester(url, scheme, header_dict, origin)
         acao_header, acac_header = headers.get(
             'access-control-allow-origin',
@@ -121,7 +119,7 @@ class CorsMisconfigScanner(Scanner):
             return {url: info}
         time.sleep(delay)
 
-        origin = scheme + '://' + root + '_.example.com'
+        origin = f'{scheme}://{root}_.example.com'
         headers = self._requester(url, scheme, header_dict, origin)
         acao_header, acac_header = headers.get(
             'access-control-allow-origin',
@@ -133,7 +131,7 @@ class CorsMisconfigScanner(Scanner):
             return {url: info}
         time.sleep(delay)
 
-        origin = scheme + '://' + root + '%60.example.com'
+        origin = f'{scheme}://{root}%60.example.com'
         headers = self._requester(url, scheme, header_dict, origin)
         acao_header, acac_header = headers.get(
             'access-control-allow-origin',
@@ -146,7 +144,7 @@ class CorsMisconfigScanner(Scanner):
         time.sleep(delay)
 
         if root.count('.') > 1:
-            origin = scheme + '://' + root.replace('.', 'x', 1)
+            origin = f'{scheme}://' + root.replace('.', 'x', 1)
             headers = self._requester(url, scheme, header_dict, origin)
             acao_header, acac_header = headers.get(
                 'access-control-allow-origin',
@@ -157,18 +155,17 @@ class CorsMisconfigScanner(Scanner):
                 info['acac header'] = acac_header
                 return {url: info}
             time.sleep(delay)
-        origin = 'http://' + root
+        origin = f'http://{root}'
         headers = self._requester(url, 'http', header_dict, origin)
         acao_header, acac_header = headers.get(
             'access-control-allow-origin',
             None), headers.get('access-control-allow-credentials', None)
-        if acao_header and acao_header.startswith('http://'):
-            info = self.details['http origin allowed']
-            info['acao header'] = acao_header
-            info['acac header'] = acac_header
-            return {url: info}
-        else:
+        if not acao_header or not acao_header.startswith('http://'):
             return self.passive_tests(url, headers)
+        info = self.details['http origin allowed']
+        info['acao header'] = acao_header
+        info['acac header'] = acac_header
+        return {url: info}
 
     def passive_tests(self, url, headers):
         root = host(url)
@@ -192,7 +189,7 @@ class CorsMisconfigScanner(Scanner):
         try:
             response = requests.get(url, headers=headers, verify=False)
             headers = response.headers
-            for key, value in headers.items():
+            for key in headers:
                 if key.lower() == 'access-control-allow-origin':
                     return headers
         except requests.exceptions.RequestException as e:
