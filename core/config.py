@@ -26,9 +26,7 @@ class Settings(BaseSettings):
 
     @validator("API_V1_STR", pre=True)
     def assemble_api_v1_str(cls, v: str) -> str:
-        if v.startswith("/"):
-            return v
-        return f"/{v}"
+        return v if v.startswith("/") else f"/{v}"
 
     class Config:
         case_sensitive = True
